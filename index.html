@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Học từ vựng - Lớp Anh thầy Kết</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+header {
+  background-color: #ffd6ba;
+  padding: 15px 20px;
+  font-weight: bold;
+  color: #7a4e3e;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+.header-left a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: #7a4e3e;
+  text-decoration: none;
+}
+.header-left a i { font-size: 28px; }
+
+header { position: relative; }
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 22px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Select */
+.top-select {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 40px;
+}
+select {
+  padding: 8px 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #a0e7e5;
+  background-color: #e3fdfd;
+}
+
+/* Preview Frame */
+.preview-box {
+  width: 80%;
+  height: 480px;
+  margin: 0 auto;
+  border: 2px solid #a0e7e5;
+  border-radius: 12px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.preview-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Word list */
+.word-list {
+  width: 45%;
+  margin: 20px auto;
+  background-color: #E0FBE2;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  font-size: 22px;
+}
+.word-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px dashed #ffb3ba;
+  transition: background-color .15s ease-in-out;
+}
+.word-row:last-child { border-bottom: none; }
+.word-row:hover { background-color: #fffacd; cursor: pointer; }
+
+/* Ôn tập */
+.review-box {
+  margin: 40px auto;
+  width: 70%;
+  background-color: #ffe5ec;
+  padding: 25px;
+  font-weight: bold;
+  color: #607274;
+  font-size: 26px;
+  border-radius: 12px;
+}
+.review-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+.review-buttons button {
+  background-color: #a0e7e5;
+  border: none;
+  padding: 12px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.review-buttons button:hover {
+  background-color: #ffb3ba;
+}
+
+/* Exercise */
+.exercise {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  font-size: 22px;
+  text-align: left;
+}
+
+/*** MCQ STYLE UPDATE ***/
+.mc-question {
+  margin-bottom: 22px;
+  padding: 12px 15px;
+  background: #fff;
+  border-radius: 10px;
+  border-left: 6px solid #ffd6ba;
+}
+.mc-q {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.mc-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 5px;
+}
+.mc-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.mc-option input[type="radio"] {
+  width: 22px;
+  height: 22px;
+  accent-color: #ff9f9f;
+  cursor: pointer;
+}
+.check-btn {
+  margin-top: 10px;
+  background-color: #a0e7e5;
+  border: none;
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.check-btn:hover {
+  background-color: #ffb3ba;
+}
+
+.result {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+footer {
+  font-size: 22px;
+  margin-top: 40px;
+  padding: 20px;
+  color: #7a4e3e;
+  background-color: #fff0e1;
+}
+
+
+.word-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 40px; /* EN | VN | tick */
+  align-items: center;
+}
+.word-en { text-align: left; }
+.word-vn { text-align: right; padding-right: 10px; }
+
+
+
+</style>
+</head>
+
+<body>
+<header>
+  <div class="header-left">
+    <a href="">  
+      <i class="fa-solid fa-house"></i> Home
+    </a>
+  </div>
+  <div class="header-center">Tiếng Anh Cấp tốc</div>
+</header>
+<!-- Select Topic -->
+<div class="top-select">
+  <select id="wordList">
+    <option value="1">Lesson 1</option>
+    <option value="2">Lesson 2</option>
+    <option value="3">Lesson 3</option>
+    <option value="4">Lesson 4</option>
+    <option value="5">Lesson 5</option>
+    <option value="6">Lesson 6</option>
+    <option value="7">Lesson 7</option>
+    <option value="8">Lesson 8</option>
+    <option value="9">Lesson 9</option>
+    <option value="10">Lesson 10</option>
+
+  </select>
+</div>
+
+<!-- Preview -->
+<div class="preview-box">
+  <iframe id="previewFrame" src=""></iframe>
+</div>
+
+<!-- Word list -->
+<div class="word-list" id="wordContainer"></div>
+
+<!-- Review -->
+<div class="review-box">
+  <div id="vietWord">Chọn Bộ từ vựng để bắt đầu</div>
+  <div id="answer" style="font-size:22px;color:#7a4e3e; margin-top:15px; text-align:center; min-height:40px;"></div>
+
+  <div class="review-buttons">
+    <button onclick="know()">Đã biết</button>
+    <button onclick="dontKnow()">Chưa biết</button>
+    <button onclick="nextWord()">Tiếp theo</button>
+  </div>
+</div>
+
+<!-- Exercises -->
+<div class="exercise" id="exercise"></div>
+
+<footer>Chúc mừng bạn đã hoàn thành bài học!</footer>
+
+<script>
+/******** DATA ********/
+const previewFiles = {
+  1:"https://drive.google.com/file/d/1A5zwK9DiOu6wbQO3vgMwaIaU7lJwzjW_/preview"
+
+
+
+
+
+};
+
+const data = {
+  1:[
+    {en: "be", vn: "thì, là, ở", tick: false},
+    {en: "have", vn: "có", tick: false},
+    {en: "do", vn: "làm", tick: false},
+    {en: "say", vn: "nói", tick: false},
+    {en: "go", vn: "đi", tick: false},
+    {en: "get", vn: "nhận được, trở nên", tick: false},
+    {en: "make", vn: "chế tạo, làm ra", tick: false},
+    {en: "know", vn: "biết", tick: false},
+    {en: "think", vn: "nghĩ", tick: false},
+    {en: "take", vn: "lấy, cầm", tick: false},
+    {en: "see", vn: "nhìn, thấy", tick: false},
+    {en: "come", vn: "đến", tick: false},
+    {en: "want", vn: "muốn", tick: false},
+    {en: "use", vn: "dùng, sử dụng", tick: false},
+    {en: "find", vn: "tìm thấy", tick: false},
+    {en: "give", vn: "cho, tặng", tick: false},
+    {en: "tell", vn: "kể, bảo", tick: false},
+    {en: "work", vn: "làm việc", tick: false},
+    {en: "call", vn: "gọi", tick: false},
+    {en: "try", vn: "thử, cố gắng", tick: false},
+    {en: "ask", vn: "hỏi", tick: false},
+    {en: "need", vn: "cần", tick: false},
+    {en: "feel", vn: "cảm thấy", tick: false},
+    {en: "become", vn: "trở nên, trở thành", tick: false},
+    {en: "leave", vn: "rời khỏi, để lại", tick: false},
+    {en: "put", vn: "đặt, để", tick: false},
+    {en: "mean", vn: "nghĩa là", tick: false},
+    {en: "keep", vn: "giữ", tick: false},
+    {en: "let", vn: "để cho, cho phép", tick: false},
+    {en: "begin", vn: "bắt đầu", tick: false},
+    {en: "seem", vn: "có vẻ như", tick: false},
+    {en: "help", vn: "giúp đỡ", tick: false},
+    {en: "talk", vn: "nói chuyện", tick: false},
+    {en: "turn", vn: "xoay, quay, rẽ", tick: false},
+    {en: "start", vn: "bắt đầu, khởi hành", tick: false},
+    {en: "show", vn: "cho xem, trình bày", tick: false},
+    {en: "hear", vn: "nghe", tick: false},
+    {en: "play", vn: "chơi", tick: false},
+    {en: "run", vn: "chạy", tick: false},
+    {en: "move", vn: "di chuyển", tick: false},
+    {en: "live", vn: "sống", tick: false},
+    {en: "believe", vn: "tin tưởng", tick: false},
+    {en: "bring", vn: "mang đến", tick: false},
+    {en: "happen", vn: "xảy ra", tick: false},
+    {en: "write", vn: "viết", tick: false},
+    {en: "sit", vn: "ngồi", tick: false},
+    {en: "stand", vn: "đứng", tick: false},
+    {en: "pay", vn: "trả tiền", tick: false},
+    {en: "meet", vn: "gặp gỡ", tick: false},
+    {en: "include", vn: "bao gồm", tick: false},
+    {en: "continue", vn: "tiếp tục", tick: false},
+    {en: "set", vn: "thiết lập, đặt", tick: false},
+    {en: "learn", vn: "học tập", tick: false},
+    {en: "change", vn: "thay đổi", tick: false},
+    {en: "lead", vn: "dẫn dắt, lãnh đạo", tick: false},
+    {en: "understand", vn: "hiểu", tick: false},
+    {en: "watch", vn: "xem, quan sát", tick: false},
+    {en: "follow", vn: "đi theo, theo dõi", tick: false},
+    {en: "stop", vn: "dừng lại", tick: false},
+    {en: "create", vn: "tạo ra", tick: false},
+    {en: "speak", vn: "nói", tick: false},
+    {en: "read", vn: "đọc", tick: false},
+    {en: "allow", vn: "cho phép", tick: false},
+    {en: "add", vn: "thêm vào", tick: false},
+    {en: "spend", vn: "tiêu xài, dành thời gian", tick: false},
+    {en: "grow", vn: "phát triển, trồng", tick: false},
+    {en: "open", vn: "mở", tick: false},
+    {en: "walk", vn: "đi bộ", tick: false},
+    {en: "win", vn: "chiến thắng", tick: false},
+    {en: "offer", vn: "đề nghị, cung cấp", tick: false},
+    {en: "remember", vn: "nhớ", tick: false},
+    {en: "love", vn: "yêu", tick: false},
+    {en: "consider", vn: "xem xét", tick: false},
+    {en: "appear", vn: "xuất hiện", tick: false},
+    {en: "buy", vn: "mua", tick: false},
+    {en: "wait", vn: "đợi", tick: false},
+    {en: "serve", vn: "phục vụ", tick: false},
+    {en: "die", vn: "chết", tick: false},
+    {en: "send", vn: "gửi", tick: false},
+    {en: "expect", vn: "mong đợi, kỳ vọng", tick: false},
+    {en: "build", vn: "xây dựng", tick: false},
+    {en: "stay", vn: "ở lại", tick: false},
+    {en: "fall", vn: "ngã, rơi", tick: false},
+    {en: "cut", vn: "cắt", tick: false},
+    {en: "reach", vn: "đạt đến, chạm tới", tick: false},
+    {en: "kill", vn: "giết", tick: false},
+    {en: "remain", vn: "còn lại, duy trì", tick: false},
+    {en: "suggest", vn: "gợi ý, đề xuất", tick: false},
+    {en: "raise", vn: "nâng lên, tăng lương", tick: false},
+    {en: "pass", vn: "vượt qua, thi đỗ", tick: false},
+    {en: "sell", vn: "bán", tick: false},
+    {en: "require", vn: "yêu cầu", tick: false},
+    {en: "report", vn: "báo cáo", tick: false},
+    {en: "decide", vn: "quyết định", tick: false},
+    {en: "pull", vn: "kéo", tick: false},
+    {en: "break", vn: "làm vỡ, ngắt quãng", tick: false},
+    {en: "receive", vn: "nhận", tick: false},
+    {en: "agree", vn: "đồng ý", tick: false},
+    {en: "support", vn: "ủng hộ, hỗ trợ", tick: false},
+    {en: "explain", vn: "giải thích", tick: false}
+  ],
+
+
+};
+
+const exercises = {
+  1:[
+    // --- PHẦN 1: NHẬN BIẾT V CHÍNH (LOẠI TO-V/V-ING) ---
+    {
+      q: "The board of directors _____ a new strategy next week.",
+      options: ["to announce", "announcing", "will announce", "announced (V3)"],
+      correct: "will announce",
+      explain: "Loại to-V và V-ing vì không làm V chính. Dấu hiệu 'next week' chọn tương lai đơn."
+    },
+    {
+      q: "The document _____ on the table belongs to the manager.",
+      options: ["lying", "is lying", "to lie", "lay"],
+      correct: "is lying",
+      explain: "Câu cần một động từ chính được chia thì (HT tiếp diễn) để mô tả trạng thái hiện tại."
+    },
+    {
+      q: "She _____ the contract before the meeting started.",
+      options: ["signing", "to sign", "had signed", "signs"],
+      correct: "had signed",
+      explain: "Vị ngữ chính cần chia thì. 'Before + QKĐ' nên vế trước dùng Quá khứ hoàn thành."
+    },
+    {
+      q: "They _____ for the company since 2010.",
+      options: ["working", "to work", "have worked", "work"],
+      correct: "have worked",
+      explain: "Loại V-ing/To-V. Dấu hiệu 'since + mốc thời gian' dùng Hiện tại hoàn thành."
+    },
+
+    // --- PHẦN 2: HIỆN TẠI ĐƠN - TIẾP DIỄN - HOÀN THÀNH ---
+    {
+      q: "He usually _____ to work by bus, but today he is driving.",
+      options: ["go", "goes", "is going", "has gone"],
+      correct: "goes",
+      explain: "Dấu hiệu 'usually' chỉ thói quen nên dùng Hiện tại đơn với chủ ngữ số ít."
+    },
+    {
+      q: "Listen! Someone _____ at the door.",
+      options: ["knocks", "is knocking", "has knocked", "knock"],
+      correct: "is knocking",
+      explain: "Dấu hiệu 'Listen!' chỉ hành động đang xảy ra tại thời điểm nói."
+    },
+    {
+      q: "I _____ this movie three times so far.",
+      options: ["see", "saw", "have seen", "am seeing"],
+      correct: "have seen",
+      explain: "Dấu hiệu 'so far' (cho đến nay) và số lần thực hiện hành động dùng Hiện tại hoàn thành."
+    },
+    {
+      q: "The Earth _____ around the Sun.",
+      options: ["move", "moves", "is moving", "has moved"],
+      correct: "moves",
+      explain: "Sự thật hiển nhiên dùng thì Hiện tại đơn."
+    },
+    {
+      q: "We _____ our report yet.",
+      options: ["don't finish", "haven't finished", "didn't finish", "not finish"],
+      correct: "haven't finished",
+      explain: "Dấu hiệu 'yet' thường dùng trong câu phủ định của thì Hiện tại hoàn thành."
+    },
+    {
+      q: "At the moment, the technicians _____ the server.",
+      options: ["repair", "are repairing", "have repaired", "repaired"],
+      correct: "are repairing",
+      explain: "Dấu hiệu 'At the moment' dùng Hiện tại tiếp diễn."
+    },
+
+    // --- PHẦN 3: QUÁ KHỨ ĐƠN - TIẾP DIỄN - HOÀN THÀNH ---
+    {
+      q: "I _____ my key while I was playing football yesterday.",
+      options: ["lost", "was losing", "had lost", "lose"],
+      correct: "lost",
+      explain: "Hành động bất chợt xen vào (mất chìa khóa) khi đang làm việc khác (đang đá bóng)."
+    },
+    {
+      q: "When I arrived at the station, the train _____ already.",
+      options: ["left", "is leaving", "had left", "has left"],
+      correct: "had left",
+      explain: "Hành động xảy ra và kết thúc trước một hành động khác trong quá khứ."
+    },
+    {
+      q: "What _____ you _____ at 8 PM last night?",
+      options: ["did/do", "were/doing", "had/done", "are/doing"],
+      correct: "were/doing",
+      explain: "Dấu hiệu 'giờ cụ thể + thời gian quá khứ' dùng Quá khứ tiếp diễn."
+    },
+    {
+      q: "She _____ as a clerk for 5 years before she got promoted.",
+      options: ["works", "has worked", "had worked", "was working"],
+      correct: "had worked",
+      explain: "Dùng Quá khứ hoàn thành để nhấn mạnh hành động xảy ra trước hành động 'got promoted'."
+    },
+    {
+      q: "My mother _____ the house two days ago.",
+      options: ["cleans", "cleaned", "has cleaned", "was cleaning"],
+      correct: "cleaned",
+      explain: "Dấu hiệu 'ago' dùng thì Quá khứ đơn."
+    },
+    {
+      q: "While my father was reading, my mother _____ the dinner.",
+      options: ["is cooking", "cooked", "was cooking", "had cooked"],
+      correct: "was cooking",
+      explain: "Hai hành động xảy ra song song trong quá khứ dùng 'While' và cả hai đều chia QKTD."
+    },
+
+    // --- PHẦN 4: TƯƠNG LAI ĐƠN - TƯƠNG LAI GẦN ---
+    {
+      q: "Look at those black clouds! It _____ rain.",
+      options: ["will", "is going to", "is raining", "rains"],
+      correct: "is going to",
+      explain: "Dùng tương lai gần 'be going to' khi có dấu hiệu/căn cứ rõ ràng ở hiện tại."
+    },
+    {
+      q: "I think he _____ the exam easily.",
+      options: ["is going to pass", "will pass", "passes", "passed"],
+      correct: "will pass",
+      explain: "Dấu hiệu 'I think' (dự đoán chủ quan) dùng Tương lai đơn."
+    },
+    {
+      q: "A: I'm cold. B: I _____ the window for you.",
+      options: ["close", "am going to close", "will close", "am closing"],
+      correct: "will close",
+      explain: "Quyết định ngay tại thời điểm nói dùng Tương lai đơn."
+    },
+    {
+      q: "We _____ a staff party this Friday. Everything is prepared.",
+      options: ["will have", "are going to have", "have", "had"],
+      correct: "are going to have",
+      explain: "Kế hoạch đã được chuẩn bị trước dùng Tương lai gần."
+    },
+
+    // --- PHẦN 5: SỰ HOÀ HỢP VỀ THÌ (SEQUENCE OF TENSES) ---
+    {
+      q: "I will call you as soon as I _____ the office.",
+      options: ["reached", "reach", "will reach", "am reaching"],
+      correct: "reach",
+      explain: "Sau 'as soon as' không dùng tương lai; dùng Hiện tại đơn khi mệnh đề chính ở Tương lai."
+    },
+    {
+      q: "By the time he arrived, we _____ our work.",
+      options: ["finished", "have finished", "had finished", "finish"],
+      correct: "had finished",
+      explain: "By the time + QKĐ, vế còn lại dùng Quá khứ hoàn thành."
+    },
+    {
+      q: "He has lived in Hanoi since he _____ school.",
+      options: ["left", "has left", "leaves", "had left"],
+      correct: "left",
+      explain: "Công thức: HT hoàn thành + SINCE + Quá khứ đơn."
+    },
+    {
+      q: "Whenever it rains, the roof _____.",
+      options: ["leak", "leaked", "leaks", "is leaking"],
+      correct: "leaks",
+      explain: "Thói quen/Sự thật lặp lại dùng Hiện tại đơn ở cả hai vế."
+    },
+
+    // --- TIẾP TỤC CÁC CÂU TRỘN LẪN (MIXED PRACTICE) ---
+    {
+      q: "The sun _____ in the East.",
+      options: ["rise", "rises", "rising", "to rise"],
+      correct: "rises",
+      explain: "Sự thật hiển nhiên và loại các dạng V không chính."
+    },
+    {
+      q: "Yesterday, I _____ to the cinema with my friends.",
+      options: ["go", "went", "have gone", "was going"],
+      correct: "went",
+      explain: "Dấu hiệu 'Yesterday' chia Quá khứ đơn."
+    },
+    {
+      q: "They _____ dinner when the lights went out.",
+      options: ["have", "were having", "had", "are having"],
+      correct: "were having",
+      explain: "Hành động đang diễn ra (đang ăn) thì hành động khác (mất điện) xen vào."
+    },
+    {
+      q: "I _____ my homework yet.",
+      options: ["don't do", "haven't done", "didn't do", "wasn't doing"],
+      correct: "haven't done",
+      explain: "Dấu hiệu 'yet' dùng Hiện tại hoàn thành."
+    },
+    {
+      q: "She _____ the piano since she was 6 years old.",
+      options: ["plays", "is playing", "has played", "played"],
+      correct: "has played",
+      explain: "Dấu hiệu 'Since + QKĐ' dùng Hiện tại hoàn thành ở vế trước."
+    },
+    {
+      q: "Wait! I _____ you with those bags.",
+      options: ["help", "am helping", "will help", "am going to help"],
+      correct: "will help",
+      explain: "Hành động giúp đỡ quyết định ngay lập tức."
+    },
+    {
+      q: "At 10 PM yesterday, we _____ a football match.",
+      options: ["watch", "watched", "were watching", "had watched"],
+      correct: "were watching",
+      explain: "Thời điểm cụ thể trong quá khứ."
+    },
+    {
+      q: "After they _____ lunch, they went out for a walk.",
+      options: ["have", "had had", "were having", "have had"],
+      correct: "had had",
+      explain: "Hành động ăn trưa xong trước khi đi dạo. Sau After dùng Quá khứ hoàn thành."
+    },
+    {
+      q: "The train _____ at 6 AM every morning.",
+      options: ["leaves", "leave", "is leaving", "left"],
+      correct: "leaves",
+      explain: "Lịch trình tàu chạy dùng Hiện tại đơn."
+    },
+    {
+      q: "Be quiet! The baby _____.",
+      options: ["sleeps", "is sleeping", "has slept", "slept"],
+      correct: "is sleeping",
+      explain: "Mệnh lệnh 'Be quiet!' cho thấy hành động đang xảy ra."
+    },
+    {
+      q: "I _____ a new car last month.",
+      options: ["buy", "bought", "have bought", "was buying"],
+      correct: "bought",
+      explain: "Dấu hiệu 'last month' dùng Quá khứ đơn."
+    },
+    {
+      q: "Before she went to bed, she _____ her teeth.",
+      options: ["brushes", "brushed", "had brushed", "is brushing"],
+      correct: "had brushed",
+      explain: "Hành động đánh răng xong trước khi đi ngủ."
+    },
+    {
+      q: "We _____ to France next summer vacation.",
+      options: ["travel", "are going to travel", "traveled", "to travel"],
+      correct: "are going to travel",
+      explain: "Kế hoạch đã định sẵn cho mùa hè tới."
+    },
+    {
+      q: "It's the first time I _____ this kind of food.",
+      options: ["eat", "ate", "have eaten", "am eating"],
+      correct: "have eaten",
+      explain: "Cấu trúc 'It's the first time + HT hoàn thành'."
+    },
+    {
+      q: "I promise I _____ anyone about your secret.",
+      options: ["don't tell", "won't tell", "am not telling", "didn't tell"],
+      correct: "won't tell",
+      explain: "Lời hứa (promise) dùng Tương lai đơn."
+    },
+{
+      q: "Please wait here until the manager _____ back from the meeting.",
+      options: ["will come", "comes", "came", "is coming"],
+      correct: "comes",
+      explain: "Câu mệnh lệnh (Please wait) + until + Hiện tại đơn. Không dùng 'will' sau liên từ chỉ thời gian."
+    },
+    {
+      q: "We will start the construction as soon as we _____ the building permit.",
+      options: ["receive", "will receive", "received", "have received"],
+      correct: "receive",
+      explain: "Mệnh đề chính dùng 'will start' (Tương lai), sau 'as soon as' ta dùng Hiện tại đơn (HTĐ) hoặc Hiện tại hoàn thành (HTHT)."
+    },
+
+  ],
+};
+
+
+
+let currList = 1, listCopy = [], index = 0;
+let originalOrder = [];  // lưu thứ tự gốc
+
+/******** LIST ********/
+function renderWords(){
+  const box = document.getElementById("wordContainer");
+  const list = data[currList];
+
+box.innerHTML = list.map((v,i)=>`
+  <div class="word-row">
+    <span class="word-en">${v.en}</span>
+    <span class="word-vn">${v.vn}</span>
+    <input type="checkbox" ${v.tick ? "checked" : ""} data-index="${i}">
+  </div>
+`).join("");
+
+  document.querySelectorAll("#wordContainer input[type='checkbox']").forEach(c=>{
+    c.addEventListener("change", toggleTick);
+  });
+}
+
+function toggleTick(e){
+  const i = e.target.dataset.index;
+  data[currList][i].tick = !data[currList][i].tick;
+
+  const checked = data[currList].filter(x=>x.tick);
+  const unchecked = originalOrder.filter(o=>!checked.find(c=>c.en===o.en));
+
+  data[currList] = [...checked, ...unchecked];
+
+  renderWords();
+}
+
+/******** REVIEW ********/
+function nextWord(){
+  if(listCopy.length===0) listCopy=[...data[currList]];
+  index=Math.floor(Math.random()*listCopy.length);
+  document.getElementById("vietWord").innerHTML=listCopy[index].vn;
+  document.getElementById("answer").innerHTML="";
+}
+function know(){
+  listCopy.splice(index,1);
+  nextWord();
+}
+function dontKnow(){
+  document.getElementById("answer").innerHTML=listCopy[index].en;
+}
+  
+/******** MCQ ********/
+
+function checkMC(idx, correct){
+  const selected = document.querySelector(`input[name="q${idx}"]:checked`);
+  const res = document.getElementById(`res${idx}`);
+  const item = exercises[currList][idx];
+
+  if(!selected){
+    res.innerHTML = "Chọn đáp án đã!";
+    res.style.color = "#C5705D";
+    return;
+  }
+
+  if(selected.value === correct){
+    res.innerHTML = "Đúng rồi!";
+    res.style.color = "green";
+  } else {
+    res.innerHTML = `Sai rồi! → ${item.explain}`;
+    res.style.color = "red";
+  }
+}
+
+function loadExercises(){
+  const box = document.getElementById("exercise");
+  const list = exercises[currList];
+  let html="";
+  
+  list.forEach((item,idx)=>{
+    const opts = [...item.options].sort(()=>Math.random()-0.5); // vẫn trộn
+    html += `
+      <div class="mc-question">
+        <div class="mc-q">${idx+1}. ${item.q}</div>
+        <div class="mc-options">
+          ${opts.map(o=>`
+            <label class="mc-option">
+              <input type="radio" name="q${idx}" value="${o}">
+              ${o}
+            </label>`).join("")}
+        </div>
+        <button class="check-btn" onclick="checkMC(${idx}, '${item.correct.replace(/'/g,"\\'")}')">Check</button>
+        <span id="res${idx}" class="result"></span>
+      </div>`;
+  });
+
+  box.innerHTML = html;
+}
+
+/******** LOAD ********/
+function loadList(){
+  currList=document.getElementById("wordList").value;
+  document.getElementById("previewFrame").src = previewFiles[currList];
+  listCopy=[...data[currList]];
+  originalOrder=[...data[currList]]; // lưu thứ tự ban đầu
+  renderWords();
+  nextWord();
+  loadExercises();
+}
+
+document.getElementById("wordList").onchange = loadList;
+loadList();
+</script>
