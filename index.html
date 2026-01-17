@@ -225,15 +225,16 @@ footer {
 <!-- Select Topic -->
 <div class="top-select">
   <select id="wordList">
-    <option value="1">Lesson 1</option>
-    <option value="2">Lesson 2</option>
-    <option value="3">Lesson 3</option>
-    <option value="4">Lesson 4</option>
-    <option value="5">Lesson 5</option>
-    <option value="6">Lesson 6</option>
-    <option value="7">Lesson 7</option>
-    <option value="8">Lesson 8</option>
-    <option value="9">Lesson 9</option>
+    <option value="1">Bảng bất quy tắc</option>
+    <option value="2">Lesson 1</option>
+    <option value="3">Lesson 2</option>
+    <option value="4">Lesson 3</option>
+    <option value="5">Lesson 4</option>
+    <option value="6">Lesson 5</option>
+    <option value="7">Lesson 6</option>
+    <option value="8">Lesson 7</option>
+    <option value="9">Lesson 8</option>
+    <option value="10">Lesson 9</option>
     <option value="10">Lesson 10</option>
 
   </select>
@@ -267,8 +268,8 @@ footer {
 <script>
 /******** DATA ********/
 const previewFiles = {
-  1:"https://drive.google.com/file/d/1A5zwK9DiOu6wbQO3vgMwaIaU7lJwzjW_/preview"
-
+  1:"NA",
+  2:"https://drive.google.com/file/d/1A5zwK9DiOu6wbQO3vgMwaIaU7lJwzjW_/preview"
 
 
 
@@ -277,113 +278,280 @@ const previewFiles = {
 
 const data = {
   1:[
-    {en: "be", vn: "thì, là, ở", tick: false},
-    {en: "have", vn: "có", tick: false},
-    {en: "do", vn: "làm", tick: false},
-    {en: "say", vn: "nói", tick: false},
-    {en: "go", vn: "đi", tick: false},
-    {en: "get", vn: "nhận được, trở nên", tick: false},
-    {en: "make", vn: "chế tạo, làm ra", tick: false},
-    {en: "know", vn: "biết", tick: false},
-    {en: "think", vn: "nghĩ", tick: false},
-    {en: "take", vn: "lấy, cầm", tick: false},
-    {en: "see", vn: "nhìn, thấy", tick: false},
-    {en: "come", vn: "đến", tick: false},
-    {en: "want", vn: "muốn", tick: false},
-    {en: "use", vn: "dùng, sử dụng", tick: false},
-    {en: "find", vn: "tìm thấy", tick: false},
-    {en: "give", vn: "cho, tặng", tick: false},
-    {en: "tell", vn: "kể, bảo", tick: false},
-    {en: "work", vn: "làm việc", tick: false},
-    {en: "call", vn: "gọi", tick: false},
-    {en: "try", vn: "thử, cố gắng", tick: false},
-    {en: "ask", vn: "hỏi", tick: false},
-    {en: "need", vn: "cần", tick: false},
-    {en: "feel", vn: "cảm thấy", tick: false},
-    {en: "become", vn: "trở nên, trở thành", tick: false},
-    {en: "leave", vn: "rời khỏi, để lại", tick: false},
-    {en: "put", vn: "đặt, để", tick: false},
-    {en: "mean", vn: "nghĩa là", tick: false},
-    {en: "keep", vn: "giữ", tick: false},
-    {en: "let", vn: "để cho, cho phép", tick: false},
-    {en: "begin", vn: "bắt đầu", tick: false},
-    {en: "seem", vn: "có vẻ như", tick: false},
-    {en: "help", vn: "giúp đỡ", tick: false},
-    {en: "talk", vn: "nói chuyện", tick: false},
-    {en: "turn", vn: "xoay, quay, rẽ", tick: false},
-    {en: "start", vn: "bắt đầu, khởi hành", tick: false},
-    {en: "show", vn: "cho xem, trình bày", tick: false},
-    {en: "hear", vn: "nghe", tick: false},
-    {en: "play", vn: "chơi", tick: false},
-    {en: "run", vn: "chạy", tick: false},
-    {en: "move", vn: "di chuyển", tick: false},
-    {en: "live", vn: "sống", tick: false},
-    {en: "believe", vn: "tin tưởng", tick: false},
-    {en: "bring", vn: "mang đến", tick: false},
-    {en: "happen", vn: "xảy ra", tick: false},
-    {en: "write", vn: "viết", tick: false},
-    {en: "sit", vn: "ngồi", tick: false},
-    {en: "stand", vn: "đứng", tick: false},
-    {en: "pay", vn: "trả tiền", tick: false},
-    {en: "meet", vn: "gặp gỡ", tick: false},
-    {en: "include", vn: "bao gồm", tick: false},
-    {en: "continue", vn: "tiếp tục", tick: false},
-    {en: "set", vn: "thiết lập, đặt", tick: false},
-    {en: "learn", vn: "học tập", tick: false},
-    {en: "change", vn: "thay đổi", tick: false},
-    {en: "lead", vn: "dẫn dắt, lãnh đạo", tick: false},
-    {en: "understand", vn: "hiểu", tick: false},
-    {en: "watch", vn: "xem, quan sát", tick: false},
-    {en: "follow", vn: "đi theo, theo dõi", tick: false},
-    {en: "stop", vn: "dừng lại", tick: false},
-    {en: "create", vn: "tạo ra", tick: false},
-    {en: "speak", vn: "nói", tick: false},
-    {en: "read", vn: "đọc", tick: false},
-    {en: "allow", vn: "cho phép", tick: false},
-    {en: "add", vn: "thêm vào", tick: false},
-    {en: "spend", vn: "tiêu xài, dành thời gian", tick: false},
-    {en: "grow", vn: "phát triển, trồng", tick: false},
-    {en: "open", vn: "mở", tick: false},
-    {en: "walk", vn: "đi bộ", tick: false},
-    {en: "win", vn: "chiến thắng", tick: false},
-    {en: "offer", vn: "đề nghị, cung cấp", tick: false},
-    {en: "remember", vn: "nhớ", tick: false},
-    {en: "love", vn: "yêu", tick: false},
-    {en: "consider", vn: "xem xét", tick: false},
-    {en: "appear", vn: "xuất hiện", tick: false},
-    {en: "buy", vn: "mua", tick: false},
-    {en: "wait", vn: "đợi", tick: false},
-    {en: "serve", vn: "phục vụ", tick: false},
-    {en: "die", vn: "chết", tick: false},
-    {en: "send", vn: "gửi", tick: false},
-    {en: "expect", vn: "mong đợi, kỳ vọng", tick: false},
-    {en: "build", vn: "xây dựng", tick: false},
-    {en: "stay", vn: "ở lại", tick: false},
-    {en: "fall", vn: "ngã, rơi", tick: false},
-    {en: "cut", vn: "cắt", tick: false},
-    {en: "reach", vn: "đạt đến, chạm tới", tick: false},
-    {en: "kill", vn: "giết", tick: false},
-    {en: "remain", vn: "còn lại, duy trì", tick: false},
-    {en: "suggest", vn: "gợi ý, đề xuất", tick: false},
-    {en: "raise", vn: "nâng lên, tăng lương", tick: false},
-    {en: "pass", vn: "vượt qua, thi đỗ", tick: false},
-    {en: "sell", vn: "bán", tick: false},
-    {en: "require", vn: "yêu cầu", tick: false},
-    {en: "report", vn: "báo cáo", tick: false},
-    {en: "decide", vn: "quyết định", tick: false},
-    {en: "pull", vn: "kéo", tick: false},
-    {en: "break", vn: "làm vỡ, ngắt quãng", tick: false},
-    {en: "receive", vn: "nhận", tick: false},
-    {en: "agree", vn: "đồng ý", tick: false},
-    {en: "support", vn: "ủng hộ, hỗ trợ", tick: false},
-    {en: "explain", vn: "giải thích", tick: false}
+  {en: "awake /əˈweɪk/; awoke; awoken", vn: "đánh thức", tick: false},
+  {en: "be (is/am/are) /biː/; was, were; been", vn: "thì, là, ở", tick: false},
+  {en: "beat /biːt/; beat; beaten", vn: "đánh, thắng", tick: false},
+  {en: "become /bɪˈkʌm/; became; become", vn: "trở thành", tick: false},
+  {en: "begin /bɪˈɡɪn/; began; begun", vn: "bắt đầu", tick: false},
+  {en: "bend /bend/; bent; bent", vn: "bẻ cong", tick: false},
+  {en: "bet /bet/; bet; bet", vn: "cá, đánh cuộc", tick: false},
+  {en: "bid /bɪd/; bid; bid", vn: "đấu giá", tick: false},
+  {en: "bite /baɪt/; bit; bitten", vn: "cắn", tick: false},
+  {en: "blow /bləʊ/; blew; blown", vn: "thổi", tick: false},
+  {en: "break /breɪk/; broke; broken", vn: "làm vỡ", tick: false},
+  {en: "bring /brɪŋ/; brought; brought", vn: "đem lại", tick: false},
+  {en: "broadcast /ˈbrɔːdkɑːst/; broadcast; broadcast", vn: "truyền hình, truyền thanh", tick: false},
+  {en: "build /bɪld/; built; built", vn: "xây dựng", tick: false},
+  {en: "burn /bɜːn/; burned/burnt; burned/burnt", vn: "làm bỏng, đốt cháy", tick: false},
+  {en: "buy /baɪ/; bought; bought", vn: "mua", tick: false},
+  {en: "catch /kætʃ/; caught; caught", vn: "bắt lấy", tick: false},
+  {en: "choose /tʃuːz/; chose; chosen", vn: "chọn", tick: false},
+  {en: "come /kʌm/; came; come", vn: "đến", tick: false},
+  {en: "cost /kɒst/; cost; cost", vn: "tốn", tick: false},
+  {en: "cut /kʌt/; cut; cut", vn: "cắt", tick: false},
+  {en: "dig /dɪɡ/; dug; dug", vn: "đào (đào lỗ)", tick: false},
+  {en: "do /duː/; did; done", vn: "làm", tick: false},
+  {en: "draw /drɔː/; drew; drawn", vn: "rút ra, vẽ", tick: false},
+  {en: "dream /driːm/; dreamed/dreamt; dreamed/dreamt", vn: "mơ, mơ ước", tick: false},
+  {en: "drive /draɪv/; drove; driven", vn: "lái xe", tick: false},
+  {en: "drink /drɪŋ/; drank; drunk", vn: "uống", tick: false},
+  {en: "eat /iːt/; ate; eaten", vn: "ăn", tick: false},
+  {en: "fall /fɔːl/; fell; fallen", vn: "rơi", tick: false},
+  {en: "feel /fiːl/; felt; felt", vn: "cảm thấy", tick: false},
+  {en: "fight /faɪt/; fought; fought", vn: "chiến đấu", tick: false},
+  {en: "find /faɪnd/; found; found", vn: "tìm thấy, cảm thấy", tick: false},
+  {en: "fly /flaɪ/; flew; flown", vn: "bay", tick: false},
+  {en: "forget /fəˈɡet/; forgot; forgotten", vn: "quên", tick: false},
+  {en: "forgive /fəˈɡɪv/; forgave; forgiven", vn: "tha thứ", tick: false},
+  {en: "freeze /friːz/; froze; frozen", vn: "đông lạnh", tick: false},
+  {en: "get /ɡet/; got; gotten", vn: "lấy, nhận", tick: false},
+  {en: "give /ɡɪv/; gave; given", vn: "cho", tick: false},
+  {en: "go /ɡəʊ/; went; gone", vn: "đi", tick: false},
+  {en: "grow /ɡrəʊ/; grew; grown", vn: "trưởng thành, trồng", tick: false},
+  {en: "hang /hæŋ/; hung; hung", vn: "treo", tick: false},
+  {en: "have /hæv/; had; had", vn: "có", tick: false},
+  {en: "hear /hɪə(r)/; heard; heard", vn: "nghe", tick: false},
+  {en: "hide /haɪd/; hid; hidden", vn: "giấu, trốn", tick: false},
+  {en: "hit /hɪt/; hit; hit", vn: "đánh", tick: false},
+  {en: "hold /həʊld/; held; held", vn: "nắm, cầm, giữ", tick: false},
+  {en: "hurt /hɜːt/; hurt; hurt", vn: "làm tổn thương", tick: false},
+  {en: "keep /kiːp/; kept; kept", vn: "giữ", tick: false},
+  {en: "know /nəʊ/; knew; known", vn: "biết", tick: false},
+  {en: "lay /leɪ/; laid; laid", vn: "đặt, để", tick: false},
+  {en: "lead /liːd/; led; led", vn: "dẫn đầu, lãnh đạo", tick: false},
+  {en: "learn /lɜːn/; learned/learnt; learned/learnt", vn: "học", tick: false},
+  {en: "leave /liːv/; left; left", vn: "rời khỏi", tick: false},
+  {en: "lend /lend/; lent; lent", vn: "cho mượn", tick: false},
+  {en: "let /let/; let; let", vn: "để cho phép", tick: false},
+  {en: "lie /laɪ/; lay; lain", vn: "nằm (nghĩa bất quy tắc)", tick: false},
+  {en: "lose /luːz/; lost; lost", vn: "mất, thua", tick: false},
+  {en: "make /meɪk/; made; made", vn: "làm ra", tick: false},
+  {en: "mean /miːn/; meant; meant", vn: "có nghĩa là", tick: false},
+  {en: "meet /miːt/; met; met", vn: "gặp mặt", tick: false},
+  {en: "pay /peɪ/; paid; paid", vn: "trả tiền", tick: false},
+  {en: "put /pʊt/; put; put", vn: "đặt, để", tick: false},
+  {en: "read /riːd/; read; read", vn: "đọc", tick: false},
+  {en: "ride /raɪd/; rode; ridden", vn: "cưỡi, đi xe", tick: false},
+  {en: "ring /rɪŋ/; rang; rung", vn: "reo, gọi điện", tick: false},
+  {en: "rise /raɪz/; rose; risen", vn: "mọc, lên cao", tick: false},
+  {en: "run /rʌn/; ran; run", vn: "chạy", tick: false},
+  {en: "say /seɪ/; said; said", vn: "nói", tick: false},
+  {en: "see /siː/; saw; seen", vn: "thấy", tick: false},
+  {en: "sell /sel/; sold; sold", vn: "bán", tick: false},
+  {en: "send /send/; sent; sent", vn: "gửi", tick: false},
+  {en: "show /ʃəʊ/; showed; showed/shown", vn: "cho xem", tick: false},
+  {en: "shut /ʃʌt/; shut; shut", vn: "đóng lại", tick: false},
+  {en: "sing /sɪŋ/; sang; sung", vn: "hát", tick: false},
+  {en: "sit /sɪt/; sat; sat", vn: "ngồi", tick: false},
+  {en: "sleep /sliːp/; slept; slept", vn: "ngủ", tick: false},
+  {en: "speak /spiːk/; spoke; spoken", vn: "nói", tick: false},
+  {en: "spend /spend/; spent; spent", vn: "tiêu xài, trải qua", tick: false},
+  {en: "stand /stænd/; stood; stood", vn: "đứng", tick: false},
+  {en: "swim /swɪm/; swam; swum", vn: "bơi lội", tick: false},
+  {en: "take /teɪk/; took; taken", vn: "lấy, nhận", tick: false},
+  {en: "teach /tiːtʃ/; taught; taught", vn: "dạy học", tick: false},
+  {en: "tear /teə(r)/; tore; torn", vn: "xé rách", tick: false},
+  {en: "tell /tel/; told; told", vn: "kể, cho biết", tick: false},
+  {en: "think /θɪŋ/; thought; thought", vn: "suy nghĩ", tick: false},
+  {en: "throw /θrəʊ/; threw; thrown", vn: "quăng, ném", tick: false},
+  {en: "understand /ˌʌndəˈstænd/; understood; understood", vn: "hiểu", tick: false},
+  {en: "wake /weɪk/; woke; woken", vn: "thức dậy", tick: false},
+  {en: "wear /weə(r)/; wore; worn", vn: "mặc, đeo", tick: false},
+  {en: "win /wɪn/; won; won", vn: "chiến thắng", tick: false},
+  {en: "write /raɪt/; wrote; written", vn: "viết", tick: false}
+],
+
+  2:[
+    {en: "want /wɑːnt/", vn: "muốn", tick: false},
+    {en: "use /juːz/", vn: "dùng, sử dụng", tick: false},
+    {en: "work /wɜːrk/", vn: "làm việc", tick: false},
+    {en: "call /kɔːl/", vn: "gọi", tick: false},
+    {en: "try /traɪ/", vn: "thử, cố gắng", tick: false},
+    {en: "ask /æsk/", vn: "hỏi", tick: false},
+    {en: "need /niːd/", vn: "cần", tick: false},
+    {en: "feel /fiːl/", vn: "cảm thấy", tick: false},
+    {en: "leave /liːv/", vn: "rời khỏi, để lại", tick: false},
+    {en: "mean /miːn/", vn: "nghĩa là", tick: false},
+    {en: "seem /siːm/", vn: "có vẻ như", tick: false},
+    {en: "help /help/", vn: "giúp đỡ", tick: false},
+    {en: "talk /tɔːk/", vn: "nói chuyện", tick: false},
+    {en: "turn /tɜːrn/", vn: "xoay, quay, rẽ", tick: false},
+    {en: "start /stɑːrt/", vn: "bắt đầu, khởi hành", tick: false},
+    {en: "play /pleɪ/", vn: "chơi", tick: false},
+    {en: "run /rʌn/", vn: "chạy", tick: false},
+    {en: "move /muːv/", vn: "di chuyển", tick: false},
+    {en: "live /lɪv/", vn: "sống", tick: false},
+    {en: "believe /bɪˈliːv/", vn: "tin tưởng", tick: false},
+    {en: "happen /ˈhæpən/", vn: "xảy ra", tick: false},
+    {en: "stand /stænd/", vn: "đứng", tick: false},
+    {en: "include /ɪnˈkluːd/", vn: "bao gồm", tick: false},
+    {en: "continue /kənˈtɪnjuː/", vn: "tiếp tục", tick: false},
+    {en: "set /set/", vn: "thiết lập, đặt", tick: false},
+    {en: "learn /lɜːrn/", vn: "học tập", tick: false},
+    {en: "change /tʃeɪndʒ/", vn: "thay đổi", tick: false},
+    {en: "lead /liːd/", vn: "dẫn dắt, lãnh đạo", tick: false},
+    {en: "understand /ˌʌndərˈstænd/", vn: "hiểu", tick: false},
+    {en: "watch /wɑːtʃ/", vn: "xem, quan sát", tick: false},
+    {en: "follow /ˈfɑːloʊ/", vn: "đi theo, theo dõi", tick: false},
+    {en: "stop /stɑːp/", vn: "dừng lại", tick: false},
+    {en: "create /kriˈeɪt/", vn: "tạo ra", tick: false},
+    {en: "allow /əˈlaʊ/", vn: "cho phép", tick: false},
+    {en: "add /æd/", vn: "thêm vào", tick: false},
+    {en: "grow /ɡroʊ/", vn: "phát triển, trồng", tick: false},
+    {en: "open /ˈoʊpən/", vn: "mở", tick: false},
+    {en: "walk /wɔːk/", vn: "đi bộ", tick: false},
+    {en: "offer /ˈɔːfər/", vn: "đề nghị, cung cấp", tick: false},
+    {en: "remember /rɪˈmembər/", vn: "nhớ", tick: false},
+    {en: "love /lʌv/", vn: "yêu", tick: false},
+    {en: "consider /kənˈsɪdər/", vn: "xem xét", tick: false},
+    {en: "appear /əˈpɪr/", vn: "xuất hiện", tick: false},
+    {en: "wait /weɪt/", vn: "đợi", tick: false},
+    {en: "serve /sɜːrv/", vn: "phục vụ", tick: false},
+    {en: "die /daɪ/", vn: "chết", tick: false},
+    {en: "expect /ɪkˈspekt/", vn: "mong đợi, kỳ vọng", tick: false},
+    {en: "stay /steɪ/", vn: "ở lại", tick: false},
+    {en: "fall /fɔːl/", vn: "ngã, rơi", tick: false},
+    {en: "cut /kʌt/", vn: "cắt", tick: false},
+    {en: "reach /riːtʃ/", vn: "đạt đến, chạm tới", tick: false},
+    {en: "kill /kɪl/", vn: "giết", tick: false},
+    {en: "remain /rɪˈmeɪn/", vn: "còn lại, duy trì", tick: false},
+    {en: "suggest /səˈɡdʒest/", vn: "gợi ý, đề xuất", tick: false},
+    {en: "raise /reɪz/", vn: "nâng lên, tăng lương", tick: false},
+    {en: "pass /pæs/", vn: "vượt qua, thi đỗ", tick: false},
+    {en: "require /rɪˈkwaɪər/", vn: "yêu cầu", tick: false},
+    {en: "report /rɪˈpɔːrt/", vn: "báo cáo", tick: false},
+    {en: "decide /dɪˈsaɪd/", vn: "quyết định", tick: false},
+    {en: "pull /pʊl/", vn: "kéo", tick: false},
+    {en: "receive /rɪˈsiːv/", vn: "nhận", tick: false},
+    {en: "agree /əˈɡriː/", vn: "đồng ý", tick: false},
+    {en: "support /səˈpɔːrt/", vn: "ủng hộ, hỗ trợ", tick: false},
+    {en: "explain /ɪkˈspleɪn/", vn: "giải thích", tick: false}
   ],
+  3:[
+    {en: "people /ˈpiːpl/", vn: "người, nhân dân", tick: false},
+    {en: "history /ˈhɪstri/", vn: "lịch sử", tick: false},
+    {en: "way /weɪ/", vn: "đường, cách thức", tick: false},
+    {en: "art /ɑːrt/", vn: "nghệ thuật", tick: false},
+    {en: "world /wɜːrld/", vn: "thế giới", tick: false},
+    {en: "information /ˌɪnfərˈmeɪʃn/", vn: "thông tin", tick: false},
+    {en: "map /mæp/", vn: "bản đồ", tick: false},
+    {en: "family /ˈfæməli/", vn: "gia đình", tick: false},
+    {en: "government /ˈɡʌvərnmənt/", vn: "chính phủ", tick: false},
+    {en: "health /helθ/", vn: "sức khỏe", tick: false},
+    {en: "system /ˈsɪstəm/", vn: "hệ thống", tick: false},
+    {en: "computer /kəmˈpjuːtər/", vn: "máy tính", tick: false},
+    {en: "meat /miːt/", vn: "thịt", tick: false},
+    {en: "year /jɪər/", vn: "năm", tick: false},
+    {en: "thanks /θæŋks/", vn: "lời cảm ơn", tick: false},
+    {en: "music /ˈmjuːzɪk/", vn: "âm nhạc", tick: false},
+    {en: "person /ˈpɜːrsn/", vn: "một người", tick: false},
+    {en: "reading /ˈriːdɪŋ/", vn: "việc đọc", tick: false},
+    {en: "method /ˈmeθəd/", vn: "phương pháp", tick: false},
+    {en: "data /ˈdeɪtə/", vn: "dữ liệu", tick: false},
+    {en: "food /fuːd/", vn: "thức ăn", tick: false},
+    {en: "understanding /ˌʌndərˈstændɪŋ/", vn: "sự hiểu biết", tick: false},
+    {en: "theory /ˈθɪəri/", vn: "lý thuyết", tick: false},
+    {en: "law /lɔː/", vn: "luật pháp", tick: false},
+    {en: "bird /bɜːrd/", vn: "con chim", tick: false},
+    {en: "literature /ˈlɪtrətʃər/", vn: "văn học", tick: false},
+    {en: "problem /ˈprɑːbləm/", vn: "vấn đề", tick: false},
+    {en: "software /ˈsɔːftwer/", vn: "phần mềm", tick: false},
+    {en: "control /kənˈtroʊl/", vn: "sự kiểm soát", tick: false},
+    {en: "knowledge /ˈnɑːlɪdʒ/", vn: "kiến thức", tick: false},
+    {en: "power /ˈpaʊər/", vn: "năng lượng, quyền lực", tick: false},
+    {en: "ability /əˈbɪləti/", vn: "khả năng", tick: false},
+    {en: "economics /ˌekəˈnɑːmɪks/", vn: "kinh tế học", tick: false},
+    {en: "love /lʌv/", vn: "tình yêu", tick: false},
+    {en: "internet /ˈɪntərnet/", vn: "mạng internet", tick: false},
+    {en: "television /ˈtelɪvɪʒn/", vn: "vô tuyến", tick: false},
+    {en: "science /ˈsaɪəns/", vn: "khoa học", tick: false},
+    {en: "library /ˈlaɪbreri/", vn: "thư viện", tick: false},
+    {en: "nature /ˈneɪtʃər/", vn: "tự nhiên", tick: false},
+    {en: "fact /fækt/", vn: "sự thật", tick: false},
+    {en: "product /ˈprɑːdʌkt/", vn: "sản phẩm", tick: false},
+    {en: "idea /aɪˈdiə/", vn: "ý tưởng", tick: false},
+    {en: "temperature /ˈtemprətʃər/", vn: "nhiệt độ", tick: false},
+    {en: "investment /ɪnˈvestmənt/", vn: "sự đầu tư", tick: false},
+    {en: "area /ˈeriə/", vn: "khu vực", tick: false},
+    {en: "society /səˈsaɪəti/", vn: "xã hội", tick: false},
+    {en: "activity /ækˈtɪvəti/", vn: "hoạt động", tick: false},
+    {en: "story /ˈstɔːri/", vn: "câu chuyện", tick: false},
+    {en: "industry /ˈɪndəstri/", vn: "ngành công nghiệp", tick: false},
+    {en: "media /ˈmiːdiə/", vn: "truyền thông", tick: false},
+    {en: "thing /θɪŋ/", vn: "đồ vật, thứ", tick: false},
+    {en: "oven /ˈʌvn/", vn: "lò nướng", tick: false},
+    {en: "community /kəˈmjuːnəti/", vn: "cộng đồng", tick: false},
+    {en: "definition /ˌdefɪˈnɪʃn/", vn: "định nghĩa", tick: false},
+    {en: "safety /ˈseɪfti/", vn: "sự an toàn", tick: false},
+    {en: "quality /ˈkwɑːləti/", vn: "chất lượng", tick: false},
+    {en: "development /dɪˈveləpmənt/", vn: "sự phát triển", tick: false},
+    {en: "language /ˈlæŋɡwɪdʒ/", vn: "ngôn ngữ", tick: false},
+    {en: "management /ˈmænɪdʒmənt/", vn: "sự quản lý", tick: false},
+    {en: "player /ˈpleɪər/", vn: "người chơi", tick: false},
+    {en: "variety /vəˈraɪəti/", vn: "sự đa dạng", tick: false},
+    {en: "video /ˈvɪdioʊ/", vn: "video", tick: false},
+    {en: "week /wiːk/", vn: "tuần", tick: false},
+    {en: "security /sɪˈkjʊrəti/", vn: "an ninh", tick: false},
+    {en: "country /ˈkʌntri/", vn: "quốc gia", tick: false},
+    {en: "exam /ɪɡˈzæm/", vn: "kỳ thi", tick: false},
+    {en: "movie /ˈmuːvi/", vn: "bộ phim", tick: false},
+    {en: "organization /ˌɔːrɡənəˈzeɪʃn/", vn: "tổ chức", tick: false},
+    {en: "equipment /ɪˈkwɪpmənt/", vn: "thiết bị", tick: false},
+    {en: "physics /ˈfɪzɪks/", vn: "vật lý", tick: false},
+    {en: "analysis /əˈnæləsɪs/", vn: "sự phân tích", tick: false},
+    {en: "policy /ˈpɑːləsi/", vn: "chính sách", tick: false},
+    {en: "series /ˈsɪriːz/", vn: "chuỗi, loạt", tick: false},
+    {en: "thought /θɔːt/", vn: "suy nghĩ", tick: false},
+    {en: "basis /ˈbeɪsɪs/", vn: "nền tảng", tick: false},
+    {en: "boy /bɔɪ/", vn: "con trai", tick: false},
+    {en: "direction /dəˈrekʃn/", vn: "hướng đi", tick: false},
+    {en: "strategy /ˈstrætədʒi/", vn: "chiến lược", tick: false},
+    {en: "technology /tekˈnɑːlədʒi/", vn: "công nghệ", tick: false},
+    {en: "army /ˈɑːrmi/", vn: "quân đội", tick: false},
+    {en: "camera /ˈkæmrə/", vn: "máy ảnh", tick: false},
+    {en: "freedom /ˈfriːdəm/", vn: "tự do", tick: false},
+    {en: "paper /ˈpeɪpər/", vn: "giấy", tick: false},
+    {en: "environment /ɪnˈvaɪrənmənt/", vn: "môi trường", tick: false},
+    {en: "child /tʃaɪld/", vn: "trẻ em", tick: false},
+    {en: "instance /ˈɪnstəns/", vn: "trường hợp", tick: false},
+    {en: "month /mʌnθ/", vn: "tháng", tick: false},
+    {en: "truth /truːθ/", vn: "sự thật", tick: false},
+    {en: "marketing /ˈmɑːrkɪtɪŋ/", vn: "tiếp thị", tick: false},
+    {en: "university /ˌjuːnɪˈvɜːrsəti/", vn: "trường đại học", tick: false},
+    {en: "writing /ˈraɪtɪŋ/", vn: "việc viết", tick: false},
+    {en: "article /ˈɑːrtɪkl/", vn: "bài báo", tick: false},
+    {en: "department /dɪˈpɑːrtmənt/", vn: "phòng ban", tick: false},
+    {en: "difference /ˈdɪfrəns/", vn: "sự khác biệt", tick: false},
+    {en: "goal /ɡoʊl/", vn: "mục tiêu", tick: false},
+    {en: "news /njuːz/", vn: "tin tức", tick: false},
+    {en: "audience /ˈɔːdiəns/", vn: "khán giả", tick: false},
+    {en: "fishing /ˈfɪʃɪŋ/", vn: "việc câu cá", tick: false},
+    {en: "growth /ɡroʊθ/", vn: "sự tăng trưởng", tick: false},
+    {en: "income /ˈɪnkʌm/", vn: "thu nhập", tick: false}
+],
+
+
 
 
 };
 
 const exercises = {
   1:[
+    {
+    },
+  ],
+
+  2:[
     // --- PHẦN 1: NHẬN BIẾT V CHÍNH (LOẠI TO-V/V-ING) ---
     {
       q: "The board of directors _____ a new strategy next week.",
@@ -440,6 +608,12 @@ const exercises = {
       options: ["repair", "are repairing", "have repaired", "repaired"],
       correct: "are repairing",
       explain: "Dấu hiệu 'At the moment' dùng Hiện tại tiếp diễn."
+    },
+    {
+      q: "Look at those dark clouds! It _____  in a few minutes.",
+      options: ["is going to rain", "rain", "is raining", "rains"],
+      correct: "is going to",
+      explain: "Thì Tương lai gần dùng để dự đoán một sự việc sắp xảy ra dựa trên bằng chứng hiện tại (dark clouds - mây đen)."
     },
 
     // --- PHẦN 3: QUÁ KHỨ ĐƠN - TIẾP DIỄN - HOÀN THÀNH ---
@@ -505,6 +679,26 @@ const exercises = {
       correct: "are going to have",
       explain: "Kế hoạch đã được chuẩn bị trước dùng Tương lai gần."
     },
+
+    {
+      q: "When we went back to the bookstore, the bookseller ______ the book we wanted.",
+      options: ["sold", "had sold", "sells", "has sold"],
+      correct: "had sold",
+      explain: "Hành động 'bán sách' xảy ra và hoàn tất TRƯỚC khi 'chúng tôi quay lại' (went back). Sự việc xảy ra trước một mốc quá khứ khác phải chia Quá khứ hoàn thành."
+    },
+    {
+      q: "By the end of last summer, the farmers ______ all the crop.",
+      options: ["harvested", "had harvested", "harvest", "are harvested"],
+      correct: "had harvested",
+      explain: "Dấu hiệu 'By the end of + thời gian quá khứ' là dấu hiệu đặc trưng của Quá khứ hoàn thành. Nó diễn tả hành động đã hoàn tất tính đến một thời điểm trong quá khứ."
+    },
+    {
+      q: "Susan ______ her family after she had taken the university entrance examination.",
+      options: ["phoned", "had phoned", "phones", "is phoning"],
+      correct: "phoned",
+      explain: "Cấu trúc với After: After + QKHT (hành động xong trước), QKĐ (hành động xong sau). Việc 'đi thi' diễn ra trước (had taken), việc 'gọi điện' diễn ra sau nên chia QKĐ."
+    },
+
 
     // --- PHẦN 5: SỰ HOÀ HỢP VỀ THÌ (SEQUENCE OF TENSES) ---
     {
@@ -664,8 +858,143 @@ const exercises = {
       options: ["explain", "spend", "become", "leave"],
       correct: "explain",
       explain: "Đối với việc hướng dẫn sử dụng phần mềm mới, động từ 'explain' (giải thích/hướng dẫn) là chính xác nhất."
-    }
+    },
+    {
+      q: "The human resources department needs to _____ more staff for the peak season.",
+      options: ["win", "receive", "require", "lead"],
+      correct: "require",
+      explain: "Căn cứ vào 'nhân sự' (HR) và 'nhân viên' (staff), động từ 'require' (yêu cầu/cần) là phù hợp nhất."
+    },
+    {
+      q: "All employees are expected to _____ the safety regulations in the factory.",
+      options: ["follow", "change", "create", "pull"],
+      correct: "follow",
+      explain: "Đi với 'regulations' (quy định/quy tắc) thì động từ 'follow' (tuân thủ/theo sát) là cụm từ chuẩn."
+    },
+    {
+      q: "The CEO decided to _____ the meeting until next Thursday due to an emergency.",
+      options: ["continue", "appear", "wait", "set"],
+      correct: "set",
+      explain: "Trong ngữ cảnh sắp xếp lại thời gian, 'set' (đặt ra/thiết lập) được dùng để ấn định thời điểm mới cho cuộc họp."
+    },
+    {
+      q: "Can you _____ to me why the project was delayed for two weeks?",
+      options: ["say", "tell", "explain", "speak"],
+      correct: "explain",
+      explain: "Mặc dù cả 4 từ đều liên quan đến nói, nhưng 'explain' (giải thích lý do) là từ chính xác nhất để đi với cấu trúc 'explain to someone why...'"
+    },
+    {
+      q: "Our company will _____ a special discount to loyal customers this month.",
+      options: ["offer", "buy", "spend", "remain"],
+      correct: "offer",
+      explain: "Khi đưa ra một chương trình 'giảm giá' (discount) hoặc 'ưu đãi', chúng ta dùng động từ 'offer' (cung cấp/tặng)."
+    },
+
+  {
+    q: "Passage 1: Last week, our department _____ (1) a meeting to discuss the new project. During the meeting, the manager ___X__the importance of completing the tasks on time. Currently, all staff members ___X__ hard to meet the upcoming deadline.",
+      options: ["holds", "held", "holding", "to hold"],
+    correct: "held",
+    explain: " (1) Dấu hiệu 'Last week' chia QKĐ."
+  },
+  {
+    q: "Passage 1: Last week, our department ___X__ a meeting to discuss the new project. During the meeting, the manager _____ (2) the importance of completing the tasks on time. Currently, all staff members ___X__ hard to meet the upcoming deadline.",
+      options: ["explained", "explain", "explaining", "had explained"],
+    correct: "explained",
+    explain: "(2) Hành động liệt kê tiếp theo trong quá khứ và dịch nghĩa 'giải thích'"
+  },
+  {
+    q: "Passage 1: Last week, our department ___X__ a meeting to discuss the new project. During the meeting, the manager ___X__ the importance of completing the tasks on time. Currently, all staff members are working hard to meet the upcoming _____ (3).",
+      options: ["salary", "document", "deadline", "department"],
+    correct: "deadline",
+    explain: "(3) meet the 'deadline' kịp thời hạn đã định."
+  },
+  {
+    q: "Passage 2: Our team _____ (1) for the international conference since last month. While we ___X__ the travel arrangements yesterday, the manager realized we had forgotten the visas. It is important to ___X__ all the necessary documents before we leave.",
+    options: ["prepared", "have prepared", "are preparing", "prepare"],
+    correct: "have prepared",
+    explain: "(1) Dấu hiệu 'since last month' (kể từ tháng trước) bắt buộc dùng thì Hiện tại hoàn thành."
+  },
+  {
+    q: "Passage 2: Our team ___X__ for the international conference since last month. While we _____ (2) the travel arrangements yesterday, the manager realized we had forgotten the visas. It is important to ___X__ all the necessary documents before we leave.",
+    options: ["make", "made", "were making", "have made"],
+    correct: "were making",
+    explain: "(2) Cấu trúc: While + QKTD (đang sắp xếp chuyến đi) thì một hành động khác xen vào (realized - nhận ra)."
+  },
+  {
+    q: "Passage 2: Our team ___X__ for the international conference since last month. While we ___X__ the travel arrangements yesterday, the manager realized we had forgotten the visas. It is important to _____ (3) all the necessary documents before we leave.",
+    options: ["collect", "lose", "ignore", "cancel"],
+    correct: "collect",
+    explain: "(3) Dịch nghĩa: Cần phải 'collect' (thu thập/tập hợp) đầy đủ 'documents' (tài liệu/giấy tờ) trước khi đi."
+  },
+  {
+    q: "Passage 3: The human resources department _____ (1) for a new marketing manager for two weeks. While they ___X__ the candidates yesterday, the power suddenly went out. They hope to ___X__ the best person for the position by the end of this month.",
+    options: ["searched", "have searched", "searching", "to search"],
+    correct: "have searched",
+    explain: "(1) Dấu hiệu 'for two weeks' (khoảng 2 tuần nay) dùng thì Hiện tại hoàn thành. Loại 'searching' và 'to search' vì không phải V chính."
+  },
+  {
+    q: "Passage 3: The human resources department ___X__ for a new marketing manager for two weeks. While they _____ (2) the candidates yesterday, the power suddenly went out. They hope to ___X__ the best person for the position by the end of this month.",
+    options: ["interviewed", "interview", "were interviewing", "have interviewed"],
+    correct: "were interviewing",
+    explain: "(2) Cấu trúc: While + QKTD (đang phỏng vấn - hành động dài) thì hành động khác xen vào (went out - mất điện)."
+  },
+  {
+    q: "Passage 3: The human resources department ___X__ for a new marketing manager for two weeks. While they ___X__ the candidates yesterday, the power suddenly went out. They hope to _____ (3) the best person for the position by the end of this month.",
+    options: ["hire", "fire", "miss", "refuse"],
+    correct: "hire",
+    explain: "(3) Dịch nghĩa: Họ hy vọng sẽ 'hire' (thuê/tuyển dụng) được người tốt nhất cho vị trí đó vào cuối tháng này."
+  },
+  {
+    q: "Passage 4: Our office usually _____ (1) at 5 PM, but it will close earlier this Friday for the lunar new year holiday. After the holiday ___X__ on Tuesday, we will have a staff meeting to start the new term. Please remember to ___X__ all electronic devices before you leave the building for safety reasons.",
+    options: ["close", "closes", "closed", "is closing"],
+    correct: "closes",
+    explain: "(1) Dấu hiệu 'usually' (thường xuyên) chỉ một lịch trình lặp lại, dùng thì Hiện tại đơn với chủ ngữ số ít (Our office)."
+  },
+  {
+    q: "Passage 4: Our office usually ___X__ at 5 PM, but it will close earlier this Friday for the lunar new year holiday. After the holiday _____ (2) on Tuesday, we will have a staff meeting to start the new term. Please remember to ___X__ all electronic devices before you leave the building for safety reasons.",
+    options: ["end", "ends", "will end", "ended"],
+    correct: "ends",
+    explain: "(2) Quy tắc: Sau các liên từ thời gian (After/When/As soon as), ta dùng Hiện tại đơn để chỉ tương lai. Không dùng 'will' ở vế này."
+  },
+  {
+    q: "Passage 4: Our office usually ___X__ at 5 PM, but it will close earlier this Friday for the holiday. After the holiday ___X__ on Tuesday, we will have a staff meeting to start the new term. Please remember to _____ (3) all electronic devices before you leave the building for safety reasons.",
+    options: ["turn off", "turn on", "look for", "take over"],
+    correct: "turn off",
+    explain: "(3) Đố vui từ vựng: Trước khi nghỉ lễ ra về, vì lý do an toàn (safety), chúng ta phải 'turn off' (tắt) các thiết bị điện."
+  },
+
+  {
+    q: "Passage 5: Dear all, our company _____ (1) a new security system since last Monday to protect our data. While the technicians were fixing the cameras yesterday, they ___X__ some broken wires. Please remember to ___X__ your ID cards whenever you enter the building.",
+    options: ["installed", "has installed", "is installing", "installs"],
+    correct: "has installed",
+    explain: "(1) Dấu hiệu 'since last Monday' (kể từ thứ Hai tuần trước) yêu cầu thì Hiện tại hoàn thành."
+  },
+  {
+    q: "Passage 5: Dear all, our company ___X__ a new security system since last Monday to protect our data. While the technicians were fixing the cameras yesterday, they _____ (2) some broken wires. Please remember to ___X__ your ID cards whenever you enter the building.",
+    options: ["found", "find", "was finding", "have found"],
+    correct: "found",
+    explain: "(2) Cấu trúc: While + QKTD (đang sửa máy - hành động dài) thì hành động khác xen vào (QKĐ: found - hành động ngắn)."
+  },
+  {
+    q: "Passage 5: Dear all, our company ___X__ a new security system since last Monday to protect our data. While the technicians were fixing the cameras yesterday, they ___X__ some broken wires. Please remember to _____ (3) your ID cards whenever you enter the building.",
+    options: ["display", "lose", "forget", "hide"],
+    correct: "display",
+    explain: "(3) Câu đố từ vựng: Để hệ thống an ninh nhận diện, nhân viên phải 'display' (xuất trình/đeo) thẻ ID. Các từ còn lại: làm mất, quên, che giấu đều không phù hợp."
+  }
   ],
+
+
+  3:[
+    {
+      q: "ĐANG UPDATE",
+      options: ["to announce", "announcing", "will announce", "announced"],
+      correct: "will announce",
+      explain: "Loại to-V và V-ing vì không làm V chính. Dấu hiệu 'next week' chọn tương lai đơn."
+    },
+  ],
+
+
+
 };
 
 
