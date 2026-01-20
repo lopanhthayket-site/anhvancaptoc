@@ -226,8 +226,8 @@ footer {
 <div class="top-select">
   <select id="wordList">
     <option value="1">Bảng bất quy tắc</option>
-    <option value="2">Lesson 1</option>
-    <option value="3">Lesson 2</option>
+    <option value="2">Lesson 1: Các thì</option>
+    <option value="3">Lesson 2: Sự hoà hợp S Vc</option>
     <option value="4">Lesson 3</option>
     <option value="5">Lesson 4</option>
     <option value="6">Lesson 5</option>
@@ -269,9 +269,8 @@ footer {
 /******** DATA ********/
 const previewFiles = {
   1:"NA",
-  2:"https://drive.google.com/file/d/1A5zwK9DiOu6wbQO3vgMwaIaU7lJwzjW_/preview"
-
-
+  2:"https://drive.google.com/file/d/1A5zwK9DiOu6wbQO3vgMwaIaU7lJwzjW_/preview",
+  3:"https://drive.google.com/file/d/13WHqVdrqENU6aV_BUIANbKhtdG9beo64/preview"
 
 
 };
@@ -537,7 +536,42 @@ const data = {
     {en: "audience /ˈɔːdiəns/", vn: "khán giả", tick: false},
     {en: "fishing /ˈfɪʃɪŋ/", vn: "việc câu cá", tick: false},
     {en: "growth /ɡroʊθ/", vn: "sự tăng trưởng", tick: false},
-    {en: "income /ˈɪnkʌm/", vn: "thu nhập", tick: false}
+    {en: "income /ˈɪnkʌm/", vn: "thu nhập", tick: false},
+  {en: "information /ˌɪnfəˈmeɪʃn/", vn: "thông tin", tick: false},
+  {en: "news /njuːz/", vn: "tin tức", tick: false},
+  {en: "advice /ədˈvaɪs/", vn: "lời khuyên", tick: false},
+  {en: "knowledge /ˈnɒlɪdʒ/", vn: "kiến thức", tick: false},
+  {en: "money /ˈmʌni/", vn: "tiền", tick: false},
+  {en: "homework /ˈhəʊmwɜːk/", vn: "bài tập về nhà", tick: false},
+  {en: "work /wɜːk/", vn: "công việc", tick: false},
+  {en: "research /rɪˈsɜːtʃ/", vn: "nghiên cứu", tick: false},
+  {en: "equipment /ɪˈkwɪpmənt/", vn: "thiết bị", tick: false},
+  {en: "furniture /ˈfɜːnɪtʃə(r)/", vn: "đồ đạc", tick: false},
+  {en: "weather /ˈweðə(r)/", vn: "thời tiết", tick: false},
+  {en: "water /ˈwɔːtə(r)/", vn: "nước", tick: false},
+  {en: "air /eə(r)/", vn: "không khí", tick: false},
+  {en: "luggage /ˈlʌɡɪdʒ/", vn: "hành lý", tick: false},
+  {en: "baggage /ˈbæɡɪdʒ/", vn: "hành lý", tick: false},
+  {en: "rice /raɪs/", vn: "gạo", tick: false},
+  {en: "bread /bred/", vn: "bánh mì", tick: false},
+  {en: "food /fuːd/", vn: "thức ăn", tick: false},
+  {en: "sugar /ˈʃʊɡə(r)/", vn: "đường", tick: false},
+  {en: "salt /sɔːlt/", vn: "muối", tick: false},
+  {en: "milk /mɪlk/", vn: "sữa", tick: false},
+  {en: "coffee /ˈkɒfi/", vn: "cà phê", tick: false},
+  {en: "tea /tiː/", vn: "trà", tick: false},
+  {en: "oil /ɔɪl/", vn: "dầu", tick: false},
+  {en: "progress /ˈprəʊɡres/", vn: "sự tiến bộ", tick: false},
+  {en: "luck /lʌk/", vn: "may mắn", tick: false},
+  {en: "health /helθ/", vn: "sức khỏe", tick: false},
+  {en: "education /ˌedʒuˈkeɪʃn/", vn: "giáo dục", tick: false},
+  {en: "pollution /pəˈluːʃn/", vn: "ô nhiễm", tick: false},
+  {en: "rubbish /ˈrʌbɪʃ/", vn: "rác (BrE)", tick: false},
+  {en: "garbage /ˈɡɑːbɪdʒ/", vn: "rác (AmE)", tick: false},
+  {en: "electricity /ɪˌlekˈtrɪsəti/", vn: "điện", tick: false},
+  {en: "energy /ˈenədʒi/", vn: "năng lượng", tick: false},
+  {en: "traffic /ˈtræfɪk/", vn: "giao thông", tick: false},
+  {en: "time /taɪm/", vn: "thời gian", tick: false}
 ],
 
 
@@ -993,12 +1027,342 @@ const exercises = {
 
 
   3:[
-    {
-      q: "ĐANG UPDATE",
-      options: ["to announce", "announcing", "will announce", "announced"],
-      correct: "will announce",
-      explain: "Loại to-V và V-ing vì không làm V chính. Dấu hiệu 'next week' chọn tương lai đơn."
-    },
+{
+  q: "My brother and his classmates ________ to school by bus every day.",
+  options: ["goes", "go", "is going", "have gone"],
+  correct: "go",
+  explain: "Chủ ngữ gồm 'My brother' và 'his classmates' nối bằng 'and' nên là số nhiều. Dấu hiệu 'every day' chia thì Hiện tại đơn."
+},
+{
+  q: "The poor ________ support from the government.",
+  options: ["needs", "need", "is needing", "has needed"],
+  correct: "need",
+  explain: "'The poor' (những người nghèo) là danh từ tập hợp chỉ một nhóm người, vì vậy động từ phải chia ở số nhiều."
+},
+  {
+    q: "The police ________ questioning the suspect now.",
+    options: ["is", "was", "are", "has"],
+    correct: "are",
+    explain: "'The police' là danh từ tập hợp luôn đi với động từ số nhiều. Có now chia Vc ở hiện tại tiếp diễn"
+  },
+  {
+    q: "Every child ________ the right to education.",
+    options: ["have", "has", "are having", "were having"],
+    correct: "has",
+    explain: "Cấu trúc 'Every + danh từ số ít' luôn đi với động từ số ít."
+  },
+  {
+    q: "Many students ________ late for class yesterday.",
+    options: ["is", "was", "are", "were"],
+    correct: "were",
+    explain: "Chủ ngữ số nhiều 'Many students' và dấu hiệu 'yesterday' nên chia 'were'."
+  },
+  {
+    q: "Most of the information ________ reliable.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Với 'Most of', động từ chia theo danh từ phía sau. 'Information' là danh từ không đếm được nên dùng số ít."
+  },
+  {
+    q: "Each of the workers ________ a safety helmet.",
+    options: ["wear", "wears", "are wearing", "were wearing"],
+    correct: "wears",
+    explain: "Cấu trúc 'Each of + danh từ số nhiều' (mỗi ...) nên chia động từ số ít."
+  },
+  {
+    q: "Neither of the answers ________ correct.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Cấu trúc 'Neither of + danh từ số nhiều' chia động từ số ít (nghĩa là không câu nào trong số đó)."
+  },
+  {
+    q: "A number of tourists ________ visited the museum this week.",
+    options: ["has", "have", "is", "was"],
+    correct: "have",
+    explain: "'A number of + danh từ số nhiều' đi với động từ số nhiều."
+  },
+  {
+    q: "The number of students in this class ________ increased this year.",
+    options: ["have", "are", "has", "were"],
+    correct: "has",
+    explain: "'The number of + danh từ số nhiều' đi với động từ số ít (chỉ một con số cụ thể)."
+  },
+  {
+    q: "Luggage ________ too heavy to carry upstairs.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "'Luggage' (hành lý) là danh từ không đếm được, luôn đi với động từ số ít."
+  },
+  {
+    q: "Everyone ________ ready for the exam.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Các đại từ bất định (Everyone, Someone, Nobody...) luôn đi với động từ số ít."
+  },
+  {
+    q: "Reading English books ________ my vocabulary.",
+    options: ["improve", "improves", "are improving", "have improved"],
+    correct: "improves",
+    explain: "Khi V-ing (Gerund) làm chủ ngữ, động từ luôn chia ở số ít."
+  },
+  {
+    q: "Physics ________ difficult for many students.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Tên các môn học kết thúc bằng 's' (Physics, Maths...) vẫn là danh từ số ít."
+  },
+  {
+    q: "Ten years ________ a long time to wait.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Khoảng thời gian, khoảng cách, tiền bạc hoặc trọng lượng được coi là một đơn vị duy nhất nên chia số ít."
+  },
+  {
+    q: "The United States ________ one of the world’s largest economies.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Tên một quốc gia (dù có 's') là danh từ riêng số ít."
+  },
+  {
+    q: "What he said ________ true.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Mệnh đề danh ngữ (Noun clause) làm chủ ngữ thì động từ chia số ít."
+  },
+  {
+    q: "The teacher, along with her students, ________ excited about the trip.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Khi chủ ngữ nối bởi 'along with', 'as well as', 'together with', động từ chia theo chủ ngữ thứ nhất (The teacher)."
+  },
+  {
+    q: "Either the manager or the employees ________ responsible for the mistake.",
+    options: ["is", "was", "are", "has"],
+    correct: "are",
+    explain: "Cấu trúc 'Either... or...' động từ chia theo chủ ngữ gần nhất với Vc (the employees)."
+  },
+  {
+    q: "The quality of these products ________ improved recently.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Cấu trúc Cụm N1 of cụm N2 thì Động từ chia theo cụm N1 'The quality', không chia theo 'products'."
+  },
+  {
+    q: "The student who ________ sitting near the window is my cousin.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Trong mệnh đề quan hệ, động từ chia theo danh từ mà đại từ 'who' thay thế trước đó (The student)."
+  },
+  {
+    q: "Homework ________ too much for students this week.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "'Homework' (bài tập về nhà) không đếm được nên động từ chia số ít."
+  },
+  {
+    q: "There ________ a lot of luggage in the room.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Trong cấu trúc 'There be', động từ chia theo danh từ ngay phía sau. 'Luggage' là danh từ không đếm được."
+  },
+  {
+    q: "Some ________ missing from the shelf in the reading room.",
+    options: ["is", "was", "are", "has"],
+    correct: "are",
+    explain: "Trong ngữ cảnh này 'Some' ám chỉ số nhiều (ví dụ: some books), nên dùng 'are'."
+  },
+  {
+    q: "The blind ________ trained to use special tools.",
+    options: ["is", "was", "are", "has"],
+    correct: "are",
+    explain: "Cấu trúc 'The + Adjective' chỉ một nhóm người nên chia động từ số nhiều."
+  },
+  {
+    q: "The trousers ________ too long for him.",
+    options: ["is", "was", "are", "has been"],
+    correct: "are",
+    explain: "Các danh từ chỉ đồ vật có hai phần đối xứng (trousers, glasses, scissors...) luôn chia số nhiều."
+  },
+  {
+    q: "Many a student ________ nervous before the exam.",
+    options: ["feel", "feels", "are feeling", "were feeling"],
+    correct: "feels",
+    explain: "Cấu trúc 'Many a + danh từ số ít' đi với động từ số ít."
+  },
+  {
+    q: "Several books ________ borrowed from the library yesterday.",
+    options: ["is", "was", "are", "were"],
+    correct: "were",
+    explain: "'Several + danh từ số nhiều' đi với động từ số nhiều. 'Yesterday' chia thì quá khứ."
+  },
+  {
+    q: "Some of the money ________ missing.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Với 'Some of', động từ chia theo danh từ 'money' (không đếm được) nên dùng số ít."
+  },
+  {
+    q: "Each of the children ________ a gift from the teacher.",
+    options: ["receive", "receives", "are receiving", "were receiving"],
+    correct: "receives",
+    explain: "Cấu trúc 'Each of + N số nhiều' luôn chia động từ số ít."
+  },
+  {
+    q: "Neither of the girls ________ finished her homework yet.",
+    options: ["have", "are", "has", "were"],
+    correct: "has",
+    explain: "'Neither of + N số nhiều' chia động từ số ít. Dùng 'has' để tạo thành thì Hiện tại hoàn thành (yet)."
+  },
+  {
+    q: "A number of workers ________ on strike last month.",
+    options: ["is", "was", "are", "were"],
+    correct: "were",
+    explain: "'A number of + N số nhiều' chia động từ số nhiều. 'Last month' chia 'were'."
+  },
+  {
+    q: "The number of accidents ________ reduced significantly.",
+    options: ["have", "are", "has", "were"],
+    correct: "has",
+    explain: "'The number of + N số nhiều' chia động từ số ít."
+  },
+  {
+    q: "Listen! Someone ________ knocking at the door.",
+    options: ["are", "were", "is", "was"],
+    correct: "is",
+    explain: "Đại từ bất định 'Someone' luôn đi với động từ số ít, có Listen chia thì hiện tại tiếp diễn."
+  },
+  {
+    q: "To learn a foreign language ________ a lot of practice.",
+    options: ["require", "requires", "are requiring", "have required"],
+    correct: "requires",
+    explain: "Khi To-infinitive làm chủ ngữ, động từ chia số ít."
+  },
+  {
+    q: "Economics ________ taught in this school.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Tên môn học có đuôi 's' (Economics, Statistics...) là danh từ số ít."
+  },
+  {
+    q: "Five kilometers ________ too far to walk.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Khoảng cách được coi là một đơn vị đo lường duy nhất nên chia số ít."
+  },
+  {
+    q: "Ten dollars ________ enough for the ticket.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Số tiền được coi là một tổng thể nên chia động từ số ít."
+  },
+  {
+    q: "The Philippines ________ famous for its beaches.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Tên quốc gia là danh từ riêng số ít."
+  },
+  {
+    q: "That people lose interest ________ worrying.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Mệnh đề danh ngữ bắt đầu bằng 'That' làm chủ ngữ chia động từ số ít."
+  },
+  {
+    q: "The manager, together with his assistants, ________ attending the meeting now.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Chủ ngữ nối bởi 'together with' chia theo chủ ngữ thứ nhất (The manager)."
+  },
+  {
+    q: "Neither the teacher nor the students ________ present yesterday.",
+    options: ["is", "was", "are", "has"],
+    correct: "were",
+    explain: "Cấu trúc 'Neither... nor...' chia theo chủ ngữ gần nhất (the students - số nhiều)."
+  },
+  {
+    q: "The price of these goods ________ risen sharply.",
+    options: ["are", "were", "is", "have been"],
+    correct: "has",
+    explain: "Động từ chia theo danh từ chính trước of: 'The price' (số ít)."
+  },
+  {
+    q: "Furniture ________ expensive in this store.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "'Furniture' (đồ nội thất) là danh từ không đếm được, chia động từ ở ngôi thứ 3 số ít."
+  },
+  {
+    q: "The girl who ________ talking to the teacher is my sister.",
+    options: ["are", "were", "is", "have been"],
+    correct: "is",
+    explain: "Đại từ quan hệ 'who' thay thế cho 'The girl' số ít."
+  },
+  {
+    q: "There ________ several mistakes in this report.",
+    options: ["is", "was", "are", "has been"],
+    correct: "are",
+    explain: "Trong cấu trúc 'There be', động từ chia theo 'several mistakes' (số nhiều)."
+  },
+  {
+    q: "All ________ been prepared in advance.",
+    options: ["is", "was", "are", "has"],
+    correct: "has",
+    explain: "Khi 'All' mang nghĩa 'mọi thứ' (vật), động từ thường chia số ít. Ở đây đi với 'been' dùng 'has'."
+  },
+  {
+    q: "Passage 1: The research team believes that the local environment _____ (1) changing rapidly. Recently, much of the ___X__ collected by the scientists has shown a rise in pollution levels. At the moment, the leader of the team, along with his assistants, ___X__ a new report.",
+    options: ["are", "is", "was", "have been"],
+    correct: "believes",
+    explain: "(1) 'the local environment' là danh từ không đếm được nên đi với động từ số ít và chia ở hiện tại tiếp diễn vì đang xảy ra."
+  },
+  {
+    q: "Passage 1: The research team believes that the local environment ___X__ changing rapidly. Recently, much of the _____ (2) collected by the scientists has shown a rise in pollution levels. At the moment, the leader of the team, along with his assistants, ___X__ a new report.",
+    options: ["figures", "information", "water", "luggage"],
+    correct: "information",
+    explain: "(2) much of + N không đếm được: 'Information' là danh từ không đếm được và đúng nghĩa câu: thu thập thông tin"
+  },
+  {
+    q: "Passage 1: The research team believes that the local environment ___X__ changing rapidly. Recently, much of the ___X__ collected by the scientists has shown a rise in pollution levels. At the moment, the leader of the team, along with his assistants, _____ (3) a new report.",
+    options: ["is preparing", "are preparing", "was preparing", "were preparing"],
+    correct: "is preparing",
+    explain: "(3) Cấu trúc 'N1 + along with + N2', động từ chia theo N1 (the leader - số ít). 'At the moment' chia Hiện tại tiếp diễn."
+  },
+  {
+    q: "Passage 2: The number of people traveling to the countryside _____ (1) increased significantly this year. Many tourists find that the ___X__ in these areas is much fresher than in the city. Currently, each of the visitors ___X__ to follow local environmental regulations.",
+    options: ["have", "has", "are", "was"],
+    correct: "has",
+    explain: "(1) Cấu trúc 'The number of + N số nhiều' đi với động từ số ít; và có this year nên chia thì hiện tại hoàn thành để chỉ kết quả."
+  },
+  {
+    q: "Passage 2: The number of people traveling to the countryside ___X__ increased significantly this year. Many tourists find that the _____ (2) in these areas is much fresher than in the city. Currently, each of the visitors ___X__ to follow local environmental regulations.",
+    options: ["traffic", "money", "air", "furniture"],
+    correct: "air",
+    explain: "(2) Dựa vào nghĩa 'fresher' (trong lành hơn) và 'countryside' (nông thôn), chọn 'air' (không khí)."
+  },
+  {
+    q: "Passage 2: The number of people traveling to the countryside ___X__ increased significantly this year. Many tourists find that the ___X__ in these areas is much fresher than in the city. Currently, each of the visitors _____ (3) to follow local environmental regulations.",
+    options: ["are required", "is required", "were required", "was required"],
+    correct: "is required",
+    explain: "(3) Cấu trúc 'Each of + N số nhiều' đi với động từ số ít. 'Currently' chia hiện tại và dạng bị động."
+  },
+  {
+    q: "Passage 3: Modern _____ (1) is essential for the factory to increase productivity. Neither the manager nor the technicians ___X__ satisfied with the old machines currently in use. Therefore, everything ___X__ being upgraded to ensure the best results next month.",
+    options: ["equipment", "tools", "worker", "electricity"],
+    correct: "equipment",
+    explain: "(1) 'Vc là is nên S là số ít nên chọn Equipment' là danh từ không đếm được và đúng nghĩa."
+  },
+  {
+    q: "Passage 3: Modern ___X__ is essential for the factory to increase productivity. Neither the manager nor the technicians _____ (2) satisfied with the old machines currently in use. Therefore, everything ___X__ being upgraded to ensure the best results next month.",
+    options: ["is", "are", "was", "were"],
+    correct: "are",
+    explain: "(2) Cấu trúc 'Neither A nor B' chia động từ theo chủ ngữ gần nhất là 'the technicians' (số nhiều), có currently nên chia hiện tại."
+  },
+  {
+    q: "Passage 3: Modern ___X__ is essential for the factory to increase productivity. Neither the manager nor the technicians ___X__ satisfied with the old machines currently in use. Therefore, everything _____ (3) being upgraded to ensure the best results next month.",
+    options: ["are", "was", "is", "have been"],
+    correct: "is",
+    explain: "(3) Đại từ bất định 'Everything' luôn đi với động từ số ít, và có next month không chia quá khứ=> nên dùng 'is' cho cấu trúc bị động tiếp diễn."
+  }
   ],
 
 
