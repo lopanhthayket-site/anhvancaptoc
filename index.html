@@ -232,7 +232,8 @@ footer {
     <option value="5">Đề thi thử 01</option>
     <option value="6">Đề thi thử 02</option>
     <option value="7">Đề thi thử 03</option>
-    <option value="8">Lesson 7: Liên từ, Adv liên kết, Mạo từ</option>
+    <option value="8">Lesson 4: Liên từ, Adv liên kết, Mạo từ</option>
+    <option value="9">Lesson 5: V-To V-Ving; Từ loại</option>
 
 
 
@@ -270,14 +271,15 @@ const previewFiles = {
   1:"https://drive.google.com/file/d/1YiTnLzR-UJLcGBSMqSSK40SvQqOL8Enh/preview",
   2:"https://drive.google.com/file/d/1A5zwK9DiOu6wbQO3vgMwaIaU7lJwzjW_/preview",
   3:"https://drive.google.com/file/d/13WHqVdrqENU6aV_BUIANbKhtdG9beo64/preview",
-  4:"https://drive.google.com/file/d/17r6hRkkw3j7l8v27oJ4TaIGPztluHJgs//preview",
+  4:"https://drive.google.com/file/d/17r6hRkkw3j7l8v27oJ4TaIGPztluHJgs/preview",
   5:"NA",
   6:"NA",
   7:"NA",
-  8:"https://drive.google.com/file/d/1Pu30DNfuSlwQRjdEWpF2UrkLet6bvcg8//preview",
-  9:"NA",
+  8:"https://drive.google.com/file/d/1Pu30DNfuSlwQRjdEWpF2UrkLet6bvcg8/preview",
+  9:"https://drive.google.com/file/d/1s4-p0BCuo_cYNrJKuDA1-GNcADRPn6jY/preview",
   10:"NA",
   11:"NA"
+
 };
 
 const data = {
@@ -1088,6 +1090,54 @@ const data = {
     {en: "similar /ˈsɪmələ(r)/", vn: "tương tự", tick: false},
     {en: "specific /spəˈsɪfɪk/", vn: "cụ thể", tick: false},
     {en: "temporary /ˈtemprəri/", vn: "tạm thời", tick: false},
+],
+
+
+  9:[
+  {en: "avoid /əˈvɔɪd/", vn: "tránh (làm gì)", tick: false},
+  {en: "admit /ədˈmɪt/", vn: "thừa nhận", tick: false},
+  {en: "consider /kənˈsɪdə(r)/", vn: "cân nhắc", tick: false},
+  {en: "deny /dɪˈnaɪ/", vn: "phủ nhận", tick: false},
+  {en: "dislike /dɪsˈlaɪk/", vn: "không thích", tick: false},
+  {en: "enjoy /ɪnˈdʒɔɪ/", vn: "thưởng thức/thích", tick: false},
+  {en: "finish /ˈfɪnɪʃ/", vn: "hoàn thành", tick: false},
+  {en: "imagine /ɪˈmædʒɪn/", vn: "tưởng tượng", tick: false},
+  {en: "keep /kiːp/", vn: "tiếp tục/duy trì", tick: false},
+  {en: "mention /ˈmenʃn/", vn: "đề cập", tick: false},
+  {en: "mind /maɪnd/", vn: "ngại/phiền", tick: false}, 
+  {en: "postpone /pəˈspəʊn/", vn: "trì hoãn", tick: false},
+  {en: "practice /ˈpræktɪs/", vn: "luyện tập", tick: false},
+  {en: "suggest /səˈdʒest/", vn: "gợi ý", tick: false},
+  {en: "risk /rɪsk/", vn: "mạo hiểm", tick: false},
+
+  {en: "agree /əˈɡriː/", vn: "đồng ý", tick: false},
+  {en: "arrange /əˈreɪndʒ/", vn: "sắp xếp", tick: false},
+  {en: "afford /əˈfɔːd/", vn: "đủ khả năng chi trả", tick: false},
+  {en: "decide /dɪˈsaɪd/", vn: "quyết định", tick: false},
+  {en: "expect /ɪkˈspekt/", vn: "mong đợi", tick: false},
+  {en: "fail /feɪl/", vn: "thất bại/trượt", tick: false},
+  {en: "hope /həʊp/", vn: "hy vọng", tick: false},
+  {en: "learn /lɜːn/", vn: "học (cách làm gì)", tick: false},
+  {en: "manage /ˈmænɪdʒ/", vn: "xoay sở/thành công", tick: false},
+  {en: "offer /ˈɒfə(r)/", vn: "ngỏ lời/đề nghị", tick: false},
+  {en: "plan /plæn/", vn: "lên kế hoạch", tick: false},
+  {en: "promise /ˈprɒmɪs/", vn: "hứa", tick: false},
+  {en: "refuse /rɪˈfjuː/", vn: "từ chối", tick: false},
+  {en: "want /wɒnt/", vn: "muốn", tick: false},
+  {en: "wish /wɪʃ/", vn: "ước/muốn", tick: false},
+
+  {en: "remember + to V", vn: "nhớ phải làm gì (chưa làm)", tick: false},
+  {en: "remember + V-ing", vn: "nhớ đã làm gì (trong quá khứ)", tick: false},
+  {en: "forget + to V", vn: "quên phải làm gì", tick: false},
+  {en: "forget + V-ing", vn: "quên đã làm gì", tick: false},
+  {en: "stop + to V", vn: "dừng lại để làm việc khác", tick: false},
+  {en: "stop + V-ing", vn: "dừng hẳn việc đang làm", tick: false},
+  {en: "try + to V", vn: "cố gắng làm gì", tick: false},
+  {en: "try + V-ing", vn: "thử làm gì (xem kết quả ra sao)", tick: false},
+  {en: "regret + to V", vn: "lấy làm tiếc khi sắp thông báo", tick: false},
+  {en: "regret + V-ing", vn: "hối hận vì đã làm gì", tick: false},
+  {en: "need + to V", vn: "cần làm gì (chủ động)", tick: false},
+  {en: "need + V-ing", vn: "cần được làm gì (bị động)", tick: false} // Ví dụ: The car needs washing.
 ],
 
 
@@ -3740,6 +3790,305 @@ const exercises = {
   }
 
 ],
+
+   9:[
+  {
+    q: "I enjoy _____ to music in my free time.",
+    options: ["listen", "to listen", "listening", "listened"],
+    correct: "listening",
+    explain: "Sau 'enjoy' luôn là V-ing."
+  },
+  {
+    q: "He decided _____ a new car next month.",
+    options: ["buy", "to buy", "buying", "bought"],
+    correct: "to buy",
+    explain: "Sau 'decide' luôn là To-V để chỉ một dự định."
+  },
+  {
+    q: "My parents let me _____ out late on weekends.",
+    options: ["go", "to go", "going", "gone"],
+    correct: "go",
+    explain: "Cấu trúc: Let + O + V (nguyên mẫu không 'to')."
+  },
+  {
+    q: "We managed _____ the project on time.",
+    options: ["finish", "to finish", "finishing", "finished"],
+    correct: "to finish",
+    explain: "Manage + To-V: Xoay sở hoặc thành công làm một việc khó khăn."
+  },
+  {
+    q: "I don't mind _____ the window for you.",
+    options: ["open", "to open", "opening", "opened"],
+    correct: "opening",
+    explain: "Mind + V-ing: Phiền hoặc ngại làm việc gì đó."
+  },
+  {
+    q: "The teacher made us _____ our homework again.",
+    options: ["do", "to do", "doing", "done"],
+    correct: "do",
+    explain: "Cấu trúc: Make + O + V (nguyên mẫu): Bắt ai làm gì."
+  },
+  {
+    q: "She promised _____ me with my assignment.",
+    options: ["help", "to help", "helping", "helped"],
+    correct: "to help",
+    explain: "Promise + To-V: Hứa sẽ làm gì."
+  },
+  {
+    q: "You should avoid _____ too much fast food.",
+    options: ["eat", "to eat", "eating", "eaten"],
+    correct: "eating",
+    explain: "Avoid + V-ing: Tránh làm việc gì đó."
+  },
+  {
+    q: "I would like _____ a cup of coffee.",
+    options: ["have", "to have", "having", "had"],
+    correct: "to have",
+    explain: "Would like + To-V: Diễn tả một mong muốn lịch sự."
+  },
+  {
+    q: "He is looking forward to _____ from you soon.",
+    options: ["hear", "to hear", "hearing", "heard"],
+    correct: "hearing",
+    explain: "Lưu ý: 'to' ở đây là giới từ, nên theo sau là V-ing."
+  },
+  {
+    q: "It's not easy _____ a foreign language.",
+    options: ["learn", "to learn", "learning", "learned"],
+    correct: "to learn",
+    explain: "Cấu trúc: It + be + adj + To-V (Làm gì đó thì như thế nào)."
+  },
+  {
+    q: "She suggested _____ to the cinema tonight.",
+    options: ["go", "to go", "going", "goes"],
+    correct: "going",
+    explain: "Suggest + V-ing: Gợi ý cùng làm việc gì đó."
+  },
+  {
+    q: "My father gave up _____ many years ago.",
+    options: ["smoke", "to smoke", "smoking", "smoked"],
+    correct: "smoking",
+    explain: "Sau cụm động từ kết thúc bằng giới từ (up), ta dùng V-ing."
+  },
+  {
+    q: "I saw him _____ the street yesterday.",
+    options: ["cross", "to cross", "crossed", "crosses"],
+    correct: "cross",
+    explain: "See + O + V: Chứng kiến toàn bộ hành động từ đầu đến cuối."
+  },
+  {
+    q: "You should _____ more water every day.",
+    options: ["drink", "to drink", "drinking", "drank"],
+    correct: "drink",
+    explain: "Sau động từ khuyết thiếu (Modal verbs) luôn là V nguyên mẫu."
+  },
+  {
+    q: "They denied _____ the money.",
+    options: ["steal", "to steal", "stealing", "stolen"],
+    correct: "stealing",
+    explain: "Deny + V-ing: Phủ nhận đã làm việc gì đó."
+  },
+  {
+    q: "We hope _____ you again soon.",
+    options: ["see", "to see", "seeing", "saw"],
+    correct: "to see",
+    explain: "Hope + To-V: Hy vọng làm gì trong tương lai."
+  },
+  {
+    q: "It's no use _____ about the past.",
+    options: ["worry", "to worry", "worrying", "worried"],
+    correct: "worrying",
+    explain: "Cấu trúc: It's no use + V-ing: Chẳng ích gì khi làm việc gì."
+  },
+  {
+    q: "He failed _____ the entrance exam.",
+    options: ["pass", "to pass", "passing", "passed"],
+    correct: "to pass",
+    explain: "Fail + To-V: Thất bại trong việc thực hiện hành động."
+  },
+  {
+    q: "I can't help _____ when I see that movie.",
+    options: ["laugh", "to laugh", "laughing", "laughed"],
+    correct: "laughing",
+    explain: "Cấu trúc: Can't help + V-ing: Không thể nhịn được (cười/khóc...)."
+  },
+  {
+    q: "Please remember _____ the door before you leave.",
+    options: ["lock", "to lock", "locking", "locked"],
+    correct: "to lock",
+    explain: "Remember + To-V: Nhớ phải làm gì (nhiệm vụ tương lai)."
+  },
+  {
+    q: "I remember _____ this place before.",
+    options: ["visit", "to visit", "visiting", "visited"],
+    correct: "visiting",
+    explain: "Remember + V-ing: Nhớ là đã làm gì (kỷ niệm quá khứ)."
+  },
+  {
+    q: "They stopped _____ because they were tired.",
+    options: ["work", "to work", "working", "worked"],
+    correct: "working",
+    explain: "Stop + V-ing: Chấm dứt hành động đang diễn ra."
+  },
+  {
+    q: "We stopped _____ a map because we were lost.",
+    options: ["buy", "to buy", "buying", "bought"],
+    correct: "to buy",
+    explain: "Stop + To-V: Dừng việc đang làm lại để thực hiện mục đích khác."
+  },
+  {
+    q: "I forgot _____ the lights, so the house was dark when I came home.",
+    options: ["turn on", "to turn on", "turning on", "turned on"],
+    correct: "to turn on",
+    explain: "Forget + To-V: Quên phải thực hiện một nhiệm vụ."
+  },
+  {
+    q: "The internet is a very _____ invention.",
+    options: ["use", "useful", "usefully", "uselessness"],
+    correct: "useful",
+    explain: "Trước danh từ 'invention' cần một tính từ. 'Useful': hữu ích."
+  },
+  {
+    q: "She speaks English very _____.",
+    options: ["good", "well", "goodness", "better"],
+    correct: "well",
+    explain: "Cần trạng từ bổ nghĩa cho động từ 'speaks'. Trạng từ của 'good' là 'well'."
+  },
+  {
+    q: "My teacher is a _____ person. Everyone likes him.",
+    options: ["friend", "friendly", "friendship", "friendliness"],
+    correct: "friendly",
+    explain: "Trước danh từ 'person' cần tính từ. 'Friendly' là tính từ mặc dù có đuôi -ly."
+  },
+  {
+    q: "You should listen _____ to the teacher's instructions.",
+    options: ["attention", "attentive", "attentively", "attentiveness"],
+    correct: "attentively",
+    explain: "Cần trạng từ 'attentively' để bổ nghĩa cho động từ 'listen'."
+  },
+  {
+    q: "There is no _____ between the two pictures.",
+    options: ["differ", "different", "difference", "differently"],
+    correct: "difference",
+    explain: "Sau 'no' cần một danh từ. 'Difference': sự khác biệt."
+  },
+  {
+    q: "Environmental _____ is a serious problem today.",
+    options: ["pollute", "polluted", "pollution", "pollutant"],
+    correct: "pollution",
+    explain: "Đóng vai trò chủ ngữ và đứng sau tính từ, ta cần danh từ 'pollution'."
+  },
+  {
+    q: "I am _____ in learning more about history.",
+    options: ["interest", "interesting", "interested", "interestingly"],
+    correct: "interested",
+    explain: "Cấu trúc 'be interested in': cảm thấy hứng thú với điều gì."
+  },
+  {
+    q: "The book I read yesterday was very _____.",
+    options: ["interest", "interesting", "interested", "interestingly"],
+    correct: "interesting",
+    explain: "Tính từ đuôi -ing dùng để miêu tả tính chất của vật (cuốn sách)."
+  },
+  {
+    q: "They live _____ in a small house in the country.",
+    options: ["peace", "peaceful", "peacefully", "peacemaker"],
+    correct: "peacefully",
+    explain: "Cần trạng từ 'peacefully' để bổ nghĩa cho động từ 'live'."
+  },
+  {
+    q: "She has a large _____ of stamps.",
+    options: ["collect", "collector", "collection", "collective"],
+    correct: "collection",
+    explain: "Sau tính từ 'large' và mạo từ 'a' cần danh từ 'collection'."
+  },
+  {
+    q: "Is it _____ to drive without a license?",
+    options: ["legal", "illegal", "legally", "illegally"],
+    correct: "illegal",
+    explain: "Sau 'is it' cần tính từ. 'Illegal': bất hợp pháp (hợp ngữ cảnh)."
+  },
+  {
+    q: "The room was _____ decorated for the party.",
+    options: ["beautiful", "beauty", "beautifully", "beautify"],
+    correct: "beautifully",
+    explain: "Trạng từ đứng trước quá khứ phân từ 'decorated' để bổ nghĩa."
+  },
+  {
+    q: "We need to find a _____ to this problem soon.",
+    options: ["solve", "solution", "soluble", "solvency"],
+    correct: "solution",
+    explain: "Sau mạo từ 'a' cần một danh từ. 'Solution': giải pháp."
+  },
+  {
+    q: "He is a _____ driver. He always speeds.",
+    options: ["danger", "dangerous", "dangerously", "endanger"],
+    correct: "dangerous",
+    explain: "Trước danh từ 'driver' cần tính từ 'dangerous' để bổ nghĩa."
+  },
+  {
+    q: "Smoking is _____ to your health.",
+    options: ["harm", "harmful", "harmless", "harmfully"],
+    correct: "harmful",
+    explain: "Sau động từ To-be cần một tính từ. 'Harmful': có hại."
+  },
+  {
+    q: "The flowers look _____ in the sunlight.",
+    options: ["beautiful", "beautifully", "beauty", "beautify"],
+    correct: "beautiful",
+    explain: "Sau động từ chỉ tri giác 'look' (trông có vẻ) cần một tính từ."
+  },
+  {
+    q: "I hope you have a _____ trip to Japan.",
+    options: ["safety", "safe", "safely", "safeguard"],
+    correct: "safe",
+    explain: "Trước danh từ 'trip' cần tính từ 'safe' để bổ nghĩa."
+  },
+  {
+    q: "We must protect _____ forests to save the Earth.",
+    options: ["nature", "natural", "naturally", "naturalist"],
+    correct: "natural",
+    explain: "Cụm danh từ: 'natural forests' (rừng tự nhiên)."
+  },
+  {
+    q: "She felt very _____ after the 10-kilometer walk.",
+    options: ["tire", "tired", "tiring", "tiredly"],
+    correct: "tired",
+    explain: "Tính từ đuôi -ed miêu tả trạng thái/cảm xúc của con người."
+  },
+  {
+    q: "The news about the accident was very _____.",
+    options: ["shock", "shocked", "shocking", "shockingly"],
+    correct: "shocking",
+    explain: "Tính từ đuôi -ing miêu tả tính chất của sự việc (tin tức)."
+  },
+  {
+    q: "He is a _____ writer who has won many awards.",
+    options: ["fame", "famous", "famously", "infamous"],
+    correct: "famous",
+    explain: "Trước danh từ 'writer' cần tính từ 'famous' (nổi tiếng)."
+  },
+  {
+    q: "He is _____ enough to carry this heavy table.",
+    options: ["strength", "strong", "strongly", "strengthen"],
+    correct: "strong",
+    explain: "Cấu trúc: Adj + enough + to V."
+  },
+  {
+    q: "The _____ of the experiment was unexpected.",
+    options: ["succeed", "success", "successful", "successfully"],
+    correct: "success",
+    explain: "Sau 'The' cần danh từ. 'Success': sự thành công."
+  },
+  {
+    q: "You should dress _____ for the job interview.",
+    options: ["formal", "formally", "formality", "formalize"],
+    correct: "formally",
+    explain: "Cần trạng từ 'formally' để bổ nghĩa cho cách thức mặc (dress)."
+  }
+
+],
+
 };
 
 
