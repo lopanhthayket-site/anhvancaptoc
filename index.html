@@ -234,7 +234,7 @@ footer {
     <option value="7">Đề thi thử 03</option>
     <option value="8">Lesson 4: Liên từ, Adv liên kết, Mạo từ</option>
     <option value="9">Lesson 5: V-To V-Ving; Từ loại</option>
-
+    <option value="10">Lesson 6: Câu điều kiện</option>
 
 
   </select>
@@ -277,9 +277,8 @@ const previewFiles = {
   7:"NA",
   8:"https://drive.google.com/file/d/1Pu30DNfuSlwQRjdEWpF2UrkLet6bvcg8/preview",
   9:"https://drive.google.com/file/d/1s4-p0BCuo_cYNrJKuDA1-GNcADRPn6jY/preview",
-  10:"NA",
+  10:"https://drive.google.com/file/d/1mtYuVlIG_X3_Z8WRZN4zrwpiTQ0W6XGK/preview",
   11:"NA"
-
 };
 
 const data = {
@@ -1138,6 +1137,10 @@ const data = {
   {en: "regret + V-ing", vn: "hối hận vì đã làm gì", tick: false},
   {en: "need + to V", vn: "cần làm gì (chủ động)", tick: false},
   {en: "need + V-ing", vn: "cần được làm gì (bị động)", tick: false} // Ví dụ: The car needs washing.
+],
+  10:[
+  {en: "regret + V-ing", vn: "hối hận vì đã làm gì", tick: false},
+
 ],
 
 
@@ -4085,6 +4088,348 @@ const exercises = {
     options: ["formal", "formally", "formality", "formalize"],
     correct: "formally",
     explain: "Cần trạng từ 'formally' để bổ nghĩa cho cách thức mặc (dress)."
+  }
+],
+   
+10:[
+  {
+    q: "If it rains, we _____ at home.",
+    options: ["stay", "will stay", "stayed", "would stay"],
+    correct: "will stay",
+    explain: "Câu điều kiện loại 1 diễn tả sự việc có thể xảy ra ở hiện tại/tương lai: If + V(hiện tại đơn), S + will + V-inf."
+  },
+  {
+    q: "If I _____ you, I would buy that car.",
+    options: ["am", "was", "were", "would be"],
+    correct: "were",
+    explain: "Câu điều kiện loại 2 (trái thực tế hiện tại), to-be luôn dùng 'were' cho tất cả các ngôi."
+  },
+  {
+    q: "If she had studied harder, she _____ the exam.",
+    options: ["passed", "would pass", "had passed", "would have passed"],
+    correct: "would have passed",
+    explain: "Câu điều kiện loại 3 diễn tả sự việc trái thực tế trong quá khứ: If + had + V3/ed, S + would have + V3/ed."
+  },
+  {
+    q: "If you _____ water to 100 degrees Celsius, it boils.",
+    options: ["heat", "heated", "will heat", "heats"],
+    correct: "heat",
+    explain: "Câu điều kiện loại 0 diễn tả sự thật hiển nhiên: If + V(hiện tại đơn), S + V(hiện tại đơn)."
+  },
+  {
+    q: "I would travel around the world if I _____ a lot of money.",
+    options: ["have", "has", "had", "will have"],
+    correct: "had",
+    explain: "Câu điều kiện loại 2: If + V(quá khứ đơn), S + would + V-inf."
+  },
+  {
+    q: "If he _____ me, I will help him.",
+    options: ["ask", "asks", "asked", "will ask"],
+    correct: "asks",
+    explain: "Câu điều kiện loại 1: Mệnh đề If dùng hiện tại đơn (chủ ngữ 'he' nên động từ thêm 's')."
+  },
+  {
+    q: "Unless you _____ now, you will be late for school.",
+    options: ["leave", "don't leave", "left", "will leave"],
+    correct: "leave",
+    explain: "Unless = If ... not. Vì đã có 'unless' nên động từ theo sau ở dạng khẳng định."
+  },
+  {
+    q: "If I _____ his number, I would have called him.",
+    options: ["know", "knew", "had known", "would know"],
+    correct: "had known",
+    explain: "Câu điều kiện loại 3: Vế 'would have called' cho biết đây là loại 3, nên vế If dùng quá khứ hoàn thành."
+  },
+  {
+    q: "What _____ if you saw a ghost?",
+    options: ["will you do", "do you do", "would you do", "did you do"],
+    correct: "would you do",
+    explain: "Câu điều kiện loại 2 (vế If là 'saw' - quá khứ đơn)."
+  },
+  {
+    q: "If they _____ faster, they might have won the race.",
+    options: ["run", "ran", "had run", "would run"],
+    correct: "had run",
+    explain: "Câu điều kiện loại 3: Diễn tả một giả định không có thật trong quá khứ."
+  },
+  {
+    q: "Plants die if they _____ enough water.",
+    options: ["don't get", "didn't get", "won't get", "doesn't get"],
+    correct: "don't get",
+    explain: "Câu điều kiện loại 0: Diễn tả một chân lý hoặc quy luật tự nhiên."
+  },
+  {
+    q: "If I _____ wings, I could fly like a bird.",
+    options: ["have", "had", "have had", "will have"],
+    correct: "had",
+    explain: "Câu điều kiện loại 2: Giả định không có thật ở hiện tại."
+  },
+  {
+    q: "She will be angry if you _____ her secret.",
+    options: ["tell", "told", "tells", "will tell"],
+    correct: "tell",
+    explain: "Câu điều kiện loại 1: If + hiện tại đơn (chủ ngữ 'you' đi với động từ nguyên mẫu)."
+  },
+  {
+    q: "If we _____ more time, we would have finished the project.",
+    options: ["have", "had", "had had", "will have"],
+    correct: "had had",
+    explain: "Câu điều kiện loại 3: 'had' (trợ động từ) + 'had' (V3 của have)."
+  },
+  {
+    q: "If you _____ ice, it melts.",
+    options: ["heat", "heated", "heats", "will heat"],
+    correct: "heat",
+    explain: "Câu điều kiện loại 0 (Zero Conditional)."
+  },
+  {
+    q: "I would have bought that dress if it _____ so expensive.",
+    options: ["wasn't", "weren't", "hadn't been", "isn't"],
+    correct: "hadn't been",
+    explain: "Câu điều kiện loại 3: Vế If chia ở quá khứ hoàn thành (hadn't been)."
+  },
+  {
+    q: "If you _____ me, I'll send you the link.",
+    options: ["email", "emailed", "emails", "will email"],
+    correct: "email",
+    explain: "Câu điều kiện loại 1."
+  },
+  {
+    q: "He _____ the job if he had performed better in the interview.",
+    options: ["got", "would get", "will get", "would have gotten"],
+    correct: "would have gotten",
+    explain: "Câu điều kiện loại 3 (vế chính)."
+  },
+  {
+    q: "If I _____ free tomorrow, I will go shopping with you.",
+    options: ["am", "was", "were", "will be"],
+    correct: "am",
+    explain: "Câu điều kiện loại 1: Sự việc có khả năng xảy ra ở tương lai."
+  },
+  {
+    q: "What would you do if you _____ the lottery?",
+    options: ["win", "won", "had won", "wins"],
+    correct: "won",
+    explain: "Câu điều kiện loại 2."
+  },
+  {
+    q: "If the weather _____ bad, we won't go out.",
+    options: ["is", "was", "were", "will be"],
+    correct: "is",
+    explain: "Câu điều kiện loại 1."
+  },
+  {
+    q: "Suppose you _____ a million dollars, what would you spend it on?",
+    options: ["have", "had", "has", "had had"],
+    correct: "had",
+    explain: "Cấu trúc giả định tương tự câu điều kiện loại 2."
+  },
+  {
+    q: "If I _____ thirsty, I always drink water.",
+    options: ["feel", "felt", "will feel", "feels"],
+    correct: "feel",
+    explain: "Câu điều kiện loại 0: Thói quen/sự thật."
+  },
+  {
+    q: "If he _____ more carefully, he wouldn't have had the accident.",
+    options: ["drives", "drove", "had driven", "would drive"],
+    correct: "had driven",
+    explain: "Câu điều kiện loại 3 (vế If)."
+  },
+  {
+    q: "You wouldn't be so tired if you _____ to bed earlier.",
+    options: ["go", "went", "had gone", "goes"],
+    correct: "went",
+    explain: "Câu điều kiện loại 2."
+  },
+  {
+    q: "If it _____ tomorrow, the match will be cancelled.",
+    options: ["snows", "snowed", "will snow", "snow"],
+    correct: "snows",
+    explain: "Câu điều kiện loại 1."
+  },
+  {
+    q: "If she _____ my advice, she wouldn't be in this trouble now.",
+    options: ["takes", "took", "had taken", "would take"],
+    correct: "had taken",
+    explain: "Câu điều kiện hỗn hợp (giả định quá khứ để lại kết quả hiện tại)."
+  },
+  {
+    q: "If you _____ your phone, you can call me.",
+    options: ["find", "found", "finds", "will find"],
+    correct: "find",
+    explain: "Câu điều kiện loại 1 (vế chính dùng động từ khuyết thiếu 'can')."
+  },
+  {
+    q: "I would be very surprised if he _____ the competition.",
+    options: ["wins", "won", "had won", "will win"],
+    correct: "won",
+    explain: "Câu điều kiện loại 2."
+  },
+  {
+    q: "If you _____ the door, it locks automatically.",
+    options: ["close", "closed", "closes", "will close"],
+    correct: "close",
+    explain: "Câu điều kiện loại 0: Quy trình máy móc/sự thật."
+  },
+  {
+    q: "____ it rain tomorrow, the outdoor concert will be moved inside.",
+    options: ["If", "Should", "Were", "Had"],
+    correct: "Should",
+    explain: "Đảo ngữ loại 1: Should + S + V-inf. Dùng để diễn tả một khả năng ít có thể xảy ra hơn."
+  },
+  {
+    q: "____ I you, I would accept their offer immediately.",
+    options: ["Was", "Am", "Were", "Should"],
+    correct: "Were",
+    explain: "Đảo ngữ loại 2 với to-be: Were + S + (O). Lưu ý không dùng 'Was' trong câu điều kiện."
+  },
+  {
+    q: "____ he known about the meeting, he would have attended it.",
+    options: ["Had", "Has", "Should", "If"],
+    correct: "Had",
+    explain: "Đảo ngữ loại 3: Had + S + V3/ed. Dùng để giả định một điều trái ngược với quá khứ."
+  },
+  {
+    q: "____ I to win the lottery, I would donate half of it to charity.",
+    options: ["Should", "Were", "Had", "If"],
+    correct: "Were",
+    explain: "Đảo ngữ loại 2 với động từ thường: Were + S + to + V-inf."
+  },
+  {
+    q: "____ the flight been delayed, we would have missed our connection.",
+    options: ["Had", "Should", "Were", "If"],
+    correct: "Had",
+    explain: "Đảo ngữ loại 3: Cấu trúc Had + S + V3/ed (been là V3 của to-be)."
+  },
+  {
+    q: "_________ ten minutes earlier, you would have got a better seat.",
+    options: ["If you arrived", "Had you arrived", "Were you arrived", "If you hadn’t arrived"],
+    correct: "Had you arrived",
+    explain: "Đảo ngữ câu điều kiện loại 3 (vế chính là would have got). Cấu trúc: Had + S + V3/ed."
+  },
+  {
+    q: "_________, we would have been forced to sack him.",
+    options: ["Were he not to resign", "If he resigned", "Had he not resigned", "If he had resigned"],
+    correct: "Had he not resigned",
+    explain: "Đảo ngữ câu điều kiện loại 3 dạng phủ định. Dịch: Nếu anh ấy đã không từ chức, chúng tôi đã buộc phải sa thải anh ấy."
+  },
+  {
+    q: " ....... here, he would help us with these troubles.",
+    options: ["Were our father", "If our father had been", "Was our father", "Unless our father were"],
+    correct: "Were our father",
+    explain: "Đảo ngữ câu điều kiện loại 2 với to-be. Cấu trúc: Were + S + ... (Nếu bố ở đây, ông ấy sẽ giúp...)."
+  },
+  {
+    q: " If I got a scholarship to England, my parents ..................very proud of me.",
+    options: ["will be", "would be", "will have been", "would have been"],
+    correct: "would be",
+    explain: "Câu điều kiện loại 2 (vế If dùng 'got' - quá khứ đơn). Diễn tả giả định không có thật ở hiện tại."
+  },
+  {
+    q: " If I had worked hard, I ........................ the exam.",
+    options: ["would pass", "pass", "passed", "would have passed"],
+    correct: "would have passed",
+    explain: "Câu điều kiện loại 3 (vế If dùng 'had worked'). Diễn tả giả định trái ngược quá khứ."
+  },
+  {
+    q: "If the power break __________ longer than two hours, the ice at the edges may have begun to melt down.",
+    options: ["would last", "had lasted", "lasted", "has lasted"],
+    correct: "had lasted",
+    explain: "Cấu trúc điều kiện loại 3 (giả định về việc mất điện đã xảy ra trong đêm). Vế chính dùng 'may have + V3' tương đương 'would have + V3'."
+  },
+  {
+    q: "Can you imagine their panic if they __________ the danger was real?",
+    options: ["had been told", "were told", "would be told", "told"],
+    correct: "had been told",
+    explain: "Điều kiện loại 3 (giả định trái ngược quá khứ). Passengers 'được kể/được thông báo' nên dùng bị động: had been told."
+  },
+  {
+    q: "If he were younger, he ______ a professional running competition now.",
+    options: ["will join", "had joined", "would have joined", "would join"],
+    correct: "would join",
+    explain: "Câu điều kiện loại 2. 'If he were' là vế giả định, vế chính dùng 'would + V-inf'."
+  },
+  {
+    q: "_____ apologized, I wouldn’t have been so upset at the time.",
+    options: ["He had", "If he", "Had he", "Would he"],
+    correct: "Had he",
+    explain: "Đảo ngữ câu điều kiện loại 3: Had + S + V3/ed (apologized)."
+  },
+  {
+    q: "After the way she treated you, if I .......... in your place, I wouldn't return the call.",
+    options: ["be", "am", "was", "were"],
+    correct: "were",
+    explain: "Câu điều kiện loại 2, dùng 'were' cho mọi ngôi khi đi với 'If I'."
+  },
+  {
+    q: "If you want to pass the exam, you ………….to work hard.",
+    options: ["have", "has", "having", "had"],
+    correct: "have",
+    explain: "Câu điều kiện loại 1 diễn tả lời khuyên/sự thật hiện tại. 'You' đi với động từ 'have' nguyên mẫu."
+  },
+
+  // Cấu trúc USED TO / BE USED TO / GET USED TO
+  {
+    q: "She didn’t cry at first, but now she ______ living alone.",
+    options: ["used to", "is used to", "use to", "was used to"],
+    correct: "is used to",
+    explain: "Be used to + V-ing: Quen với việc gì đó ở hiện tại (trước đây chưa quen nhưng 'now' đã quen)."
+  },
+  {
+    q: "I ______ play football every afternoon when I was in secondary school.",
+    options: ["am used to", "get used to", "used to", "was using"],
+    correct: "used to",
+    explain: "Used to + V-inf: Đã từng làm gì trong quá khứ và giờ không làm nữa."
+  },
+  {
+    q: "He is new in this company, so he hasn’t ______ working under pressure yet.",
+    options: ["used to", "been used to", "get used to", "using to"],
+    correct: "been used to",
+    explain: "Cấu trúc hiện tại hoàn thành: hasn't + been used to + V-ing (vẫn chưa quen với việc gì)."
+  },
+  {
+    q: "It was hard at the beginning, but I finally got used to ______ up early.",
+    options: ["get", "getting", "got", "to get"],
+    correct: "getting",
+    explain: "Get used to + V-ing: Trở nên quen với việc gì đó."
+  },
+  // Cấu trúc SO / SUCH / TOO
+  {
+    q: "It was ______ cold that we decided to stay at home.",
+    options: ["such", "so", "very", "too"],
+    correct: "so",
+    explain: "Cấu trúc: So + Adj/Adv + that + clause (Quá đến nỗi mà)."
+  },
+  {
+    q: "She is ______ a careful student that teachers trust her.",
+    options: ["so", "such", "very", "too"],
+    correct: "such",
+    explain: "Cấu trúc: Such + (a/an) + Adj + Noun + that + clause."
+  },
+  {
+    q: "I was .................tired that I went to bed immediately.",
+    options: ["so", "such", "very", "too"],
+    correct: "so",
+    explain: "So + tired (tính từ) + that."
+  },
+  {
+    q: "There were ______ many mistakes in his writing that he failed the test.",
+    options: ["such", "very", "so", "too"],
+    correct: "so",
+    explain: "Lưu ý đặc biệt: Dùng 'So' với many/much/few/little dù phía sau là danh từ."
+  },
+  {
+    q: "It was ______ an interesting story that everyone listened carefully.",
+    options: ["so", "such", "very", "too"],
+    correct: "such",
+    explain: "Such + an + Adj + Noun + that."
+  },
+  {
+    q: "The question was ______ difficult for me to answer.",
+    options: ["such", "so", "very", "too"],
+    correct: "too",
+    explain: "Cấu trúc: Too + Adj + (for somebody) + to + V-inf (Quá... để cho ai làm gì)."
   }
 
 ],
