@@ -235,7 +235,7 @@ footer {
     <option value="8">Lesson 4: Liên từ, Adv liên kết, Mạo từ</option>
     <option value="9">Lesson 5: V-To V-Ving; Từ loại</option>
     <option value="10">Lesson 6: Câu điều kiện</option>
-
+    <option value="11">Lesson 7: MĐQH-So sánh</option>
 
   </select>
 </div>
@@ -278,7 +278,8 @@ const previewFiles = {
   8:"https://drive.google.com/file/d/1Pu30DNfuSlwQRjdEWpF2UrkLet6bvcg8/preview",
   9:"https://drive.google.com/file/d/1s4-p0BCuo_cYNrJKuDA1-GNcADRPn6jY/preview",
   10:"https://drive.google.com/file/d/1mtYuVlIG_X3_Z8WRZN4zrwpiTQ0W6XGK/preview",
-  11:"NA"
+  11:"https://drive.google.com/file/d/1ULl36QNKJ6Se0_EQj31o-JG4mHWyTGQv/preview",
+  12:"NA"
 };
 
 const data = {
@@ -1139,6 +1140,10 @@ const data = {
   {en: "need + V-ing", vn: "cần được làm gì (bị động)", tick: false} // Ví dụ: The car needs washing.
 ],
   10:[
+  {en: "regret + V-ing", vn: "hối hận vì đã làm gì", tick: false},
+
+],
+  11:[
   {en: "regret + V-ing", vn: "hối hận vì đã làm gì", tick: false},
 
 ],
@@ -4433,6 +4438,235 @@ const exercises = {
   }
 
 ],
+
+
+   11:[
+  {
+    q: "The man ______ lives next door is a famous musician.",
+    options: ["who", "whom", "which", "whose"],
+    correct: "who",
+    explain: "Dùng 'who' làm chủ ngữ thay thế cho danh từ chỉ người (The man)."
+  },
+  {
+    q: "The book ______ I bought yesterday is very interesting.",
+    options: ["who", "whom", "which", "whose"],
+    correct: "which",
+    explain: "Dùng 'which' làm tân ngữ/chủ ngữ thay thế cho danh từ chỉ vật (The book)."
+  },
+  {
+    q: "Do you know the girl ______ mother is a famous doctor?",
+    options: ["who", "whom", "which", "whose"],
+    correct: "whose",
+    explain: "Dùng 'whose' để chỉ sở hữu cho danh từ đứng trước (The girl's mother)."
+  },
+  {
+    q: "The city ______ I was born is very beautiful.",
+    options: ["which", "where", "when", "that"],
+    correct: "where",
+    explain: "Dùng 'where' (trạng từ quan hệ) để thay thế cho nơi chốn."
+  },
+  {
+    q: "The summer ______ we met was the coldest in ten years.",
+    options: ["where", "which", "when", "who"],
+    correct: "when",
+    explain: "Dùng 'when' (trạng từ quan hệ) để thay thế cho thời gian (The summer)."
+  },
+  {
+    q: "The candidate ______ we interviewed yesterday was very impressive.",
+    options: ["which", "whom", "whose", "when"],
+    correct: "whom",
+    explain: "Dùng 'whom' làm tân ngữ thay thế cho danh từ chỉ người (The candidate)."
+  },
+  {
+    q: "This is the most expensive car ______ I have ever seen.",
+    options: ["who", "which", "that", "whom"],
+    correct: "that",
+    explain: "Dùng 'that' sau cấu trúc so sánh nhất (the most expensive)."
+  },
+  {
+    q: "The students ______ finish the test early can leave the room.",
+    options: ["who", "whom", "which", "whose"],
+    correct: "who",
+    explain: "Dùng 'who' làm chủ ngữ thay thế cho danh từ chỉ người số nhiều (The students)."
+  },
+  {
+    q: "The house ______ windows are broken has been abandoned.",
+    options: ["who", "which", "whose", "that"],
+    correct: "whose",
+    explain: "Dùng 'whose' chỉ sở hữu (cửa sổ của ngôi nhà)."
+  },
+  {
+    q: "I don't like stories ______ have unhappy endings.",
+    options: ["who", "which", "whom", "whose"],
+    correct: "which",
+    explain: "Dùng 'which' làm chủ ngữ thay thế cho vật (stories)."
+  },
+  {
+    q: "The reason ______ he failed the exam is still a mystery.",
+    options: ["when", "where", "why", "which"],
+    correct: "why",
+    explain: "Dùng 'why' (trạng từ quan hệ) để chỉ lý do sau danh từ 'the reason'."
+  },
+  {
+    q: "All the people ______ were invited to the party showed up.",
+    options: ["which", "that", "whom", "whose"],
+    correct: "that",
+    explain: "Dùng 'that' sau các đại từ bất định hoặc 'all', 'every', 'some', 'any'."
+  },
+  {
+    q: "The man ______ you were talking to is my uncle.",
+    options: ["who", "which", "whose", "where"],
+    correct: "who",
+    explain: "Trong văn nói, 'who' thường được dùng thay cho 'whom' làm tân ngữ chỉ người."
+  },
+  {
+    q: "The laptop ______ screen is cracked belongs to Tom.",
+    options: ["which", "who", "whose", "that"],
+    correct: "whose",
+    explain: "Dùng 'whose' chỉ sở hữu cho cả người và vật (màn hình của laptop)."
+  },
+  {
+    q: "Paris is a place ______ I've always wanted to visit.",
+    options: ["where", "which", "when", "why"],
+    correct: "which",
+    explain: "Dùng 'which' vì ở đây đóng vai trò tân ngữ của động từ 'visit' (không dùng where)."
+  },
+  {
+    q: "I will never forget the day ______ we first met in that small cafe.",
+    options: ["where", "when", "why", "which"],
+    correct: "when",
+    explain: "Dùng 'when' làm trạng từ quan hệ thay thế cho thời gian (the day)."
+  },
+  {
+    q: "The hotel ______ we stayed during our vacation was very comfortable.",
+    options: ["where", "which", "when", "why"],
+    correct: "where",
+    explain: "Dùng 'where' làm trạng từ quan hệ thay thế cho nơi chốn (The hotel)."
+  },
+  {
+    q: "Please tell me the reason ______ you decided to quit your job.",
+    options: ["where", "when", "why", "that"],
+    correct: "why",
+    explain: "Dùng 'why' làm trạng từ quan hệ chỉ lý do, thường đứng sau danh từ 'the reason'."
+  },
+  {
+    q: "2020 was the year ______ the world faced a global pandemic.",
+    options: ["which", "where", "when", "whose"],
+    correct: "when",
+    explain: "Dùng 'when' để bổ nghĩa cho mốc thời gian (the year)."
+  },
+  {
+    q: "That is the house ______ my grandparents used to live many years ago.",
+    options: ["where", "when", "why", "which"],
+    correct: "where",
+    explain: "Dùng 'where' để chỉ nơi chốn (the house), tương đương với 'in which'."
+  },
+  {
+    q: "The man to ______ I spoke yesterday was very helpful.",
+    options: ["who", "whom", "which", "that"],
+    correct: "whom",
+    explain: "Khi có giới từ (to) đứng trước và chỉ người, phải dùng 'whom' (speak to someone)."
+  },
+  {
+    q: "The environmental project in ______ she is involved is very ambitious.",
+    options: ["who", "whom", "which", "where"],
+    correct: "which",
+    explain: "Khi có giới từ (in) đứng trước và chỉ vật, phải dùng 'which' (involved in something)."
+  },
+
+  {
+    q: "This laptop is ______ than the one I bought last year.",
+    options: ["fast", "faster", "fastest", "as fast"],
+    correct: "faster",
+    explain: "Cấu trúc so sánh hơn với tính từ ngắn: Adj-er + than."
+  },
+  {
+    q: "The blue whale is ______ animal in the world.",
+    options: ["large", "larger", "the largest", "as large as"],
+    correct: "the largest",
+    explain: "Cấu trúc so sánh nhất với tính từ ngắn: The + Adj-est."
+  },
+  {
+    q: "She is ______ as her sister.",
+    options: ["more beautiful", "as beautiful", "beautiful", "the most beautiful"],
+    correct: "as beautiful",
+    explain: "Cấu trúc so sánh bằng: As + Adj + As."
+  },
+  {
+    q: "This exercise is ______ than the previous one.",
+    options: ["difficult", "more difficult", "most difficult", "as difficult"],
+    correct: "more difficult",
+    explain: "Cấu trúc so sánh hơn với tính từ dài: More + Adj + than."
+  },
+  {
+    q: "Yesterday was ______ day of the year so far.",
+    options: ["hot", "hotter", "the hottest", "as hot"],
+    correct: "the hottest",
+    explain: "Cấu trúc so sánh nhất: The + Adj-est (nhân đôi phụ âm cuối 't')."
+  },
+  {
+    q: "Your result is ______ than mine.",
+    options: ["good", "gooder", "better", "best"],
+    correct: "better",
+    explain: "Dạng so sánh hơn đặc biệt của 'good' là 'better'."
+  },
+  {
+    q: "Who is ______ person in your family?",
+    options: ["the tallest", "tallest", "taller", "as tall"],
+    correct: "the tallest",
+    explain: "So sánh nhất cho người/vật trong một nhóm: The + Adj-est."
+  },
+  {
+    q: "This book isn't ______ as the movie.",
+    options: ["more interesting", "interesting", "as interesting", "most interesting"],
+    correct: "as interesting",
+    explain: "Cấu trúc so sánh bằng (phủ định): Not as/so + Adj + as."
+  },
+  {
+    q: "Health is ______ than money.",
+    options: ["important", "more important", "most important", "as important"],
+    correct: "more important",
+    explain: "So sánh hơn với tính từ dài (important)."
+  },
+  {
+    q: "Mount Everest is ______ mountain on Earth.",
+    options: ["higher", "highest", "the highest", "as high"],
+    correct: "the highest",
+    explain: "So sánh nhất với tính từ ngắn (high)."
+  },
+  {
+    q: "The weather today is ______ than it was yesterday.",
+    options: ["bad", "badder", "worse", "worst"],
+    correct: "worse",
+    explain: "Dạng so sánh hơn đặc biệt của 'bad' là 'worse'."
+  },
+  {
+    q: "Is Tokyo ______ than London?",
+    options: ["expensive", "more expensive", "most expensive", "the most expensive"],
+    correct: "more expensive",
+    explain: "Câu hỏi so sánh hơn với tính từ dài."
+  },
+  {
+    q: "He runs ______ than anyone else in the class.",
+    options: ["fast", "fastly", "faster", "fastest"],
+    correct: "faster",
+    explain: "So sánh hơn của trạng từ 'fast' (fast cũng là trạng từ)."
+  },
+  {
+    q: "This is ______ film I've ever watched.",
+    options: ["the worst", "worse", "bad", "badly"],
+    correct: "the worst",
+    explain: "Dạng so sánh nhất đặc biệt của 'bad' là 'the worst'."
+  },
+  {
+    q: "No one in the office is ______ as Mary.",
+    options: ["as hard-working", "more hard-working", "the most hard-working", "hard-working"],
+    correct: "as hard-working",
+    explain: "Cấu trúc so sánh bằng: as + adj + as."
+  }
+
+  ],
+
 
 };
 
